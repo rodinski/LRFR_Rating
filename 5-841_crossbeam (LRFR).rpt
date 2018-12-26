@@ -1,0 +1,2739 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   ############################################
+                   #                                          #
+                   #     B R I D G E     R A T I N G          #
+                   #               Dec 2018                   #
+                   #                                          #
+                   #  Bridge No. : 5-841 (crossbeam)          #
+                   #  Bridge Name:                            #
+                   #     H Street Over I-5                    #
+                   #                                          #
+                   #                                          #
+                   #                                          #
+                   ############################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+                 ============================================
+                 B R I D G E    R A T I N G     S U M M A R Y
+                   ***     Per  LRFR Specifications     ***
+                 ============================================
+ 
+ 
+       Bridge Number..: 5-841 (crossbeam)
+       Bridge Name....: H Street Over I-5
+       Location.......:
+       Date Built.....: 1961
+       Rated By.......: Burns & McDonnell
+       ADTV...........:
+       BRIDG Revision..: 10.9 Jun 21 2018
+ 
+       GENERAL NOTES:
+       ==============
+       4 Span PCB, Four spans all simple for all loads
+       Design Live Load HS20
+ 
+       SPAN/MEMBER INFORMATION (Continued):
+       ====================================
+ 
+                         ----------LRFR Resistance Factors ----------------
+                         CONVENTIONAL   --PRESTRESSED---   --POST-TENSION--
+       Mbr  Span Length  REINFORCED     Pos   Neg          Pos   Neg
+                         MOM   SHR      MOM   MOM   SHR    MOM   MOM   SHR
+       ===  ==== ======  ====  ====     ====  ====  ====   ====  ====  ====
+         1     1   6.00  0.90  0.90     1.00  0.90  0.90   0.95  0.90  0.90
+         2     2  18.00  0.90  0.90     1.00  0.90  0.90   0.95  0.90  0.90
+         3     3  18.00  0.90  0.90     1.00  0.90  0.90   0.95  0.90  0.90
+         4     4   6.00  0.90  0.90     1.00  0.90  0.90   0.95  0.90  0.90
+                 ======
+                  48.00
+ 
+       **** R A T I N G   F A C T O R S  ****
+       ======================================
+ 
+       Load                   ----- Strength ----  ----- Service -----
+       Combination     Type   Mom   Span Distance  Mom   Span Distance  Shr   Span Distance
+       =============== ====== ===== ==== ========  ===== ==== ========  ===== ==== ========
+       AASHTO 1        Legal   6.59    2    10.00   -NC- ---- --------  13.69    3     4.00
+       AASHTO 2        Legal   5.03    2    10.00   -NC- ---- --------  10.22    3     4.00
+       AASHTO 3        Legal   4.74    2    10.00   -NC- ---- --------   9.58    3     4.00
+       NRL             Legal   4.14    2    10.00   -NC- ---- --------   8.24    3     3.75
+       OL 1 + Controll Permit  4.52    2    10.00   -NC- ---- --------   7.83    3     4.00
+       OL 2 + Controll Permit  2.48    2    10.00   -NC- ---- --------   4.16    3     3.75
+       EV2 + Controlli EV      4.14    2    10.00   -NC- ---- --------   8.24    3     3.75
+       EV3 + Controlli EV      3.81    2    10.00   -NC- ---- --------   7.49    3     3.75
+ 
+       Design Truck:
+ 
+       HL93            INV     1.77    2    10.00   -NC- ---- --------   3.05    3     3.50
+       HL93            OPER    2.29    2    10.00   -NC- ---- --------   3.95    3     3.50
+
+TEMPLATE REV:10.9
+BDF FILE:    5-841_crossbeam.bdf
+TIME    :    Sun Dec 16 12:22:46 2018
+
+
+* =============================================================================================================================
+# [BEGIN DATA ENTRY]           <Beginning of standard "BRIDG" data entry blocks>
+= ==================================================================================================================================
+
+* =============================================================================================================================
+# [GENERAL COMMENTS]     0000  <BDF File Comments>
+* ==================================================================================================================================
+*     "BRIDG" DATA BLOCK NAMES, REFERENCE NUMBER, AND DESCRIPTION.
+*     FOR EASE IN EDITING/SEARCHING, EACH DATA BLOCK NAME IS ENCLOSED IN SQUARE BRACKETS ([]).
+*
+*     NAME                 NUM   DESCRIPTION
+*     ==================== ====  ==================================================================================================
+*     GENERAL COMMENTS     0000  General Comments
+*     BRIDGE DESCRIPTION   0001  Bridge Description
+*     ANALYSIS CTRLS       0003  Analysis Controls and Parameters
+*     IMP & RES FACTORS    0004  Impact and Resistance Factors
+*     NBI RES FACTORS      0005  NBI Resistance Factors
+*     FRAME DESCRIPTION    1001  Frame Description
+*     STAGED CONSTRUCTION  1001A Staged Construction Analysis
+*     COLUMN PROPERTIES    1002  Column Data
+*     BRACE PROPERTIES     1003  Brace Data
+*     LIVE LOAD DIST FACT  1004  Live Load Distribution Factor (LRFD)
+*     EXPLICIT LLDF        1005  Explicit Live Load Distribution Factor (LRFD)
+*     PROFILE GRADE        1006  Profile Grade Elevations
+*     BARRIER & SW GEOM    1008  Barrier and Sidewalk Geometry
+*     BOX GIRDER LIBRARY   1010  Box Girder Cross-Section Library
+*     BOX GIRDER MEMBER    1011  Box Girder Member Composition
+*     CIP T-BEAM MEMBER    1012  Cast-In-Place T-Beam Member Definition
+*     SLAB MEMBER          1013  Voided Slab Member Composition
+*     PC BOX LIBRARY       1014A Precast Box Girder Library
+*     PC GIRDER LIBRARY    1014B Precast Girder Library
+*     MISC GIRDER LIBRARY  1014C Miscellaneous Girder Library
+*     GIRDER SPACING       1015A Multiple Girder Spacing
+*     GIRDER MEMBER COMP   1015B Girder/Slab Member Description
+*     RAISED CROSS BEAM    1016  Raised Cross-Beam Description
+*     MEMBER TRANSITION    1017  Automatic Member transition
+*     SHEAR STEEL          1021  Shear Steel Data
+*     TOP STEEL(A)         1022  Top Longitudinal Steel - Negative Moment Reinforcement Data
+*     BOTTOM STEEL(A)      1023  Bottom Longitudinal Steel - Positive Moment Reinforcement Data
+*     TOP STEEL(B)         1024  Top Longitudinal Steel - Negative Moment Reinforcement Data
+*     BOTTOM STEEL(B)      1025  Bottom Longitudinal Steel - Positive Moment Reinforcement Data
+*     CABLE PATH DATA      1030  Prestress - Cable Path Data
+*     CABLE PATH GEOMETRY  1031  Prestress - Cable Geometry
+*     DEAD LOADS           1045  Define Dead Loads
+*     MEMBER DEAD LOADS    1046  Member Dead Load Entry
+*     MEMBER DL DIST       1047  Member Dead Load Distribution
+*     MEMBER LIVE LOADS    1048  Member Live Load Entry
+*     TRUCK DEFINITION     1049  Live Load - Truck Data
+*     LOAD COMBINATIONS    1050  Live Load Combinations
+*
+*     TRANSVERSE ANALYSIS  1100  Transverse Beam General Header and Comments
+*     TR-BEAM/SLAB/XBEAM   1101  Slab / Lane / Xbeam  Descriptions
+*     TR-LOAD TRANSFER LOC 1102  Transverse Beam Load Locations
+*     TR-REACTIONS         1105  Transverse Beam Reaction Loads
+*     TR-LOAD COMBINATIONS 1110  Cross Beam Live Load Combination
+*
+*     AR:COMP.TRAN.SECT    5100  Composite Transformed Section Properties
+*     AR:GIRDER SECT PROP  5101  Non-Composite Girder Section Properties
+*     AR:CABLE DATA        5200  Prestress Cable Info at Member Tenth Points
+*     AR:STRAIN COMPAT.    5201  Strain Compatibility Info at Member Tenth Points
+*     AR:ULTIMATE CAPACITY 5202  Span Ultimate Capacities
+*     AR:DEAD LOADS (FACT) 5300  Working Dead Load, Superimposed Dead Load, and Secondary Shears and Moments
+*     AR:LIVE LOADS (FACT) 5302  Factored Live Load Combination Shear and Moment Envelopes
+*     AR:DL WORKING STRESS 5400  Dead Load and Superimposed Dead Load Working Stresses
+*     AR:PS WORKING STRESS 5401  Prestress and Secondary Working Stresses
+*     AR:LL WORKING STRESS 5402  Live Load Working Stresses for Load Combinations
+*     AR:WRK STRESS STL -A 5403  Working Stress in Conventional Tension Reinforcement - Part A
+*     AR:WRK STRESS STL -B 5404  Working Stress in Conventional Tension Reinforcement - Part B
+*     AR:DL FCT WRK STRESS 5500  Factored Dead, Superimposed Dead and Prestress Horizontal Shear Stresses
+*     AR:LL FCT HRZ STRESS 5501  Factored Live Load Horizontal Shear Stresses
+*     AR:UNFACTORED REACT  5600  Unfactored Reactions
+*     AR:NODE FORCE/DISP   5601  Node reaction forces and displacements
+*     AR:MEMBER DL DISP    5602  Span static load vertical elastic displacements
+*     AR:MEMBER LL DISP    5603  Span live load vertical elastic displacements
+*     AR:LOAD RATINGS      5700  Load Rating Factors
+*     AR:LOAD RATINGS-FHWA 5700A Load Rating Factors per AASHTO-1994 Criteria
+*     AR:LOAD RATINGS-LRFR 5700B Load Rating Factors per AASHTO-LRFR Criteria
+*     AR:LLDF AT 10TH PT   5800  Live Load Distribution Factors at 10th Points
+*
+====================================================================================================================================
+
+* =============================================================================================================================
+# [BRIDGE DESCRIPTION]   0001  <General Bridge Description Data>
+* ==================================================================================================================================
+*  Use the "DESC" entries to include bridge descriptive data with the bridge computer data base.
+*  None of the "DESC" information is used by the rating program, but will be included in the program report.
+*
+*
+*  VALID KEY WORDS:  BNUM     --> Bridge Number
+*                    DATE     --> Year bridge was built and other pertinent date information.
+*                    ENGR     --> Design Engineer
+*                    RATER    --> Enter name of company, date, and person rating bridge.
+*                    NAME     --> Bridge Name
+*                    LOC      --> Bridge location, include route/hwy number, milepost, and descriptive location.
+*                    ADTV     --> Average Daily Traffic Reports, and Count Date if supplied.
+*                    TITL1    --> First  line of Title that appears on front page of RPT file in title box.
+*                    TITL2    --> Second line of Title that appears on front page of RPT file in title box.
+*                    FOOT1    --> Footing that appears on bottom of report. Line 1. Typically company name.
+*                    FOOT2    --> Footing that appears on bottom of report. Line 2. Typically company type.
+*                    DESC     --> Any other descriptive information that should be included with the computer database info.
+*                                 Standard uses for DESC are:
+*                                   1) Description of bridge structural system. Example: Concrete Box Girder.
+*                                   2) Type of reinforcing. Example: Conventional Reinforcing.
+*                                   3) Latest inspection report date. Example: Latest inspection report - 10/31/90.
+*                                   4) Statement specifying whether or not bridge has a wearing surface.
+*
+*
+*        A maximum of 10 "DESC" entries may be entered. If there is a need to use more than one
+*        "DESC", use another "DESC" entry and indent the remaining text if desired.
+*        All "DESC" entries are printed on the summary page of the report in order entered.
+*
+*        WSDOT requires the following Four "DESC" lines:
+*        1) DESCRIPTION OF BRIDGE TYPE, FOR EXAMPLE:
+*             Concrete Box Girder, Conventional Reinf., High Abutments, Tapered Center Column.
+*
+*        2) DESIGN LOADING, FOR EXAMPLE:
+*             Design Loads: HS20 or TWO 24 KIP AXLES at 4 Ft Ctrs
+*
+*        3) LATEST INSPECTION REPORT, FOR EXAMPLE:
+*             Latest Inspection Date - 10/31/1990
+*
+*        4) WEARING SURFACE DESCRIPTION OR NOTE THAT THERE IS NONE.
+*
+*
+*
+KEY
+WORD       TEXT
+=====  ============================================================================================================================
+BNUM   5-841 (crossbeam)
+DATE   1961
+ENGR   WSDOT
+RATER  Burns & McDonnell
+NAME   H Street Over I-5
+LOC    
+ADTV   
+CDATE  
+TITL1  
+TITL2  
+FOOT1  
+FOOT2  
+DESC   4 Span PCB, Four spans all simple for all loads
+DESC   Design Live Load HS20
+
+* =============================================================================================================================
+# [ANALYSIS CTRLS]       0003  <Analysis Controls and Parameters>
+* ==================================================================================================================================
+*  NOMENCLATURE: Each Keyword has an accompanying value, a Yes or No,  or another keyword.
+*                The accompanying type is specified by the following:
+*                 #         = a number
+*                 (Yes/No)  = The words Yes or No
+*                 <keyword> = Another keyword
+*
+*  COMMENTS: If Transverse Analysis:
+*             Data block 1049 is ignored.
+*             If a ".REA" is not available, data block 1105 must be used.
+*
+*  TRUCK SPEED CONTROLS:
+*
+*  During live load calculations, the distance a truck or point load is moved
+*  is controlled by two values: TruckSpeed and MotionMode.
+*
+*  For Longitudinal Analysis, if MotionMode is set to 'F' for fraction, then the
+*  truck is moved a distance equal to TruckSpeed times the length of the current
+*  span.  The current span is the span that the truck's front wheel is on.  The
+*  truck is always started at the beginning of each span.
+*
+*  For transverse analysis, if MotionMode is set to 'F' then each truck is moved
+*  a distance equal to TruckSpeed times Lane Width.
+*
+*  If MotionMode is set to 'D' for distance, then all live loads are moved a
+*  distance equal to Truck Speed for each iteration.
+*
+*  The following are suggested values, but bridges with both short and long
+*  spans may need adjustment to these parameters.
+*
+*   1) Longitudinal Analysis:
+*      MotionMode = 'F', TruckSpeed = 0.05 (1/20 span length)
+*
+*   2) Transverse Analysis: MotionMode = 'F', TruckSpeed = 0.25 (1/4 lane width)
+*
+*
+*  Note: For Longitudinal Analysis, the TruckSpeed is limited to a minimum
+*        of IDist and a maximum of 10 feet.
+*
+*
+*                             KeyWord      Comment
+*                             ==========   =======================================================================================
+*  Keywords for:NoShrRFCLS    None         This option not active
+*               RdMomRFCLS    FaceOfSup    Face of support
+*                             Dg/2         1/2 Girder Depth from face of support
+*                             D/2          1/2 Total Depth from face of support
+*                             Dg           Girder Depth from face of support
+*                             D            Total Depth from face of support
+*
+*
+           Number,
+           Yes or No
+Key Word   or KeyWrd   Type       COMMENT
+========== ==========  ========   =================================================
+*-----   Analysis / Graphics Controls -----
+ModelType  Transverse  (Keyword)  Either: Lngitudnal (Longitudinal) or Transverse. Lngitudnal is the default.
+IDist           0.250  (#)(ft)    Analysis Integration Distance
+MinANodes          20  (#)        Minimum number of analysis nodes per member.
+MaxDNodes      10.000  (#)(ft)    Maximum distance between analysis nodes.
+TruckSpeed      0.050  (% or ft)  See Truck Speed notes in header
+MotionMode          F  (F or D)   See Truck Speed notes in header
+LnLdSpeed           2  (#)        Lane Load Rider speed as multiple of IDist
+TickTime          999  (Seconds)  Screen update interval for "crunching icon" while BDRS is working. 999=Off
+MotionIter        999  (#)        Number of analysis iterations per screen animation updates. 999=No Animation.
+WhLdSpread      2.000  (#)(ft)    Distance to spread wheel load over
+RptMbrTran          N  (Yes/No)   Report member sections generated by MemberTransition in report file.
+
+*------- Valid ONLY for FHWA analysis method ------
+FHWAAutoCv          N  (Yes/No)   Automatically convert loading
+InvLLF          2.170  (#)        Inventory Live Load factor. (FHWA only)
+OperLLF         1.300  (#)        Operating Live Load factor. (FHWA only)
+MomArmCnvg      0.042  (inches)   Convergence distance when computing compression block moment arm.
+SetMRatio       0.000  (#)        Force modular ratio to value. If zero then BRIDG will compute modular ratio.
+OvLdIMP         1.100  (#)        Impact factor for overload trucks (FHWA only)
+DLFactor        1.300  (#)        Dead ultimate load factor.
+PSFactor        1.000  (#)        PS ultimate load factor.
+
+*------- Valid ONLY for LRFD analysis method ------
+LRFRAutoCv          N  (Yes/No)   Automatically convert loading
+DCFactor        1.250  (#)        Dead load component factor
+DWFactor        1.500  (#)        Dead load wearing surface factor
+Inv2LLF         1.750  (#)        Inventory Live Load factor. (LRFR only)
+Oper2LLF        1.350  (#)        Operating Live Load factor. (LRFR only)
+LegalLLF        1.300  (#)        Legal Live Load factor.
+PermitLLF       1.200  (#)        Permit Live Load factor.
+EVehicleLLF     1.300  (#)        Emergency Vehicle Live Load factor.
+ServiceLLF      1.000  (#)        Service Live Load factor.
+HL93IMP         1.330  (#)        Impact for HL93 (Inv and operating)
+LegalIMP        1.100  (#)        BDM Impact for legal, permit and emergency vehicles
+SysFactor       1.000  (#)        System factor (for redundancy. 1.00=redundant)
+BridgeWdth      0.000  (#)        Full width of bridge. Minimum width is one lane width.
+LaneWidth      14.140  (ft)       Width of each lane.
+IntrBeam            N  (Yes/No)   Is this interior beam analysis (else exterior)
+
+*------  Analysis Switches  --------------
+CalcInf             N  (Yes/No)   Calculate influence lines. (Results in diagnostic file .INF)
+CalcBC              N  (Yes/No)   Calculate FEM Nodal Boundary Condition Resultant Forces.
+CalcColBr           N  (Yes/No)   Calculate Column/Brace forces (Results in diagnostic file .CBF)
+
+*------  Factors and logic controls  -----
+ColConcWt     155.000  (#)(pcf)   Column concrete weight.
+BrcConcWt     155.000  (#)(pcf)   Brace  concrete weight.
+GrdConcWt     155.000  (#)(pcf)   Girder concrete weight.
+SlabConcWt    155.000  (#)(pcf)   Slab concrete weight.
+LongStlFy      40.000  (#)(ksi)   Longitudinal steel yield strength.
+ShrStlFy       40.000  (#)(ksi)   Shear steel yield strength.
+SrvLRNM             N  (Yes/No)   Service load rating for negative moment.
+CreepFact       1.000  (#)        Creep factor for long term displacements.
+CrackMom            N  (Yes/No)   Use cracking moment as minimum concrete capacity.
+StrCapTol       1.000  (#)(Kips)  Strain compatibility calculation iteration tolerance.
+CTratio         0.900  (#)        Ratio of yield stress to ultimate stress of prestress strand. Used in CT equations.
+
+*----- Load Reduction and Adjustment Codes -----
+PsShrRFCLS          D  (Keyword)  Reduce loads for prestress shear rate from center line of support to <keyword>.
+CvShrRFCLS          D  (Keyword)  Reduce loads for conventional shear rate from center line of support to <keyword>.
+PsMomRFCLS       NONE  (Keyword)  Reduce loads for prestress moment rate from center line of support to <keyword>.
+CvMomRFCLS  FACEOFSUP  (Keyword)  Reduce loads for conventional moment rate from center line of support to <keyword>.
+NegMomInc           N  (Yes/No)   Negative moment increase 1/2d from face of support.
+RateSupt            N  (Yes/No)   Rate from center line of support to face of support.
+
+*----- LFR (FHWA) Allowable Stresses -----
+AllowTen        6.000  (mult)     Allow PS concrete tension stress multiplier * SQRT(f'c). If 0.0 then default to 6.0
+AllowTenOL      6.900  (mult)     Allow PS concrete tension stress multiplier * SQRT(f'c) for Overload. If 0.0 then default to 6.9
+AllowCmp        0.600  (mult)     Allow PS concrete compression stress multiplier * (f'c). If 0.0 then default to 0.6
+AllowCmpOL      0.690  (mult)     Allow PS concrete compression stress multiplier * (f'c) for Overload. If 0.0 then default to 0.69
+AllowCmp2       0.400  (mult)     Allow PS concrete compression stress multiplier * (f'c). If 0.0 then default to 0.4
+AllowCp2OL      0.460  (mult)     Allow PS concrete compression stress multiplier * (f'c) for Overload. If 0.0 then default to 0.46
+AllowPSInv      0.800  (mult)     Allow steel tension stress multiplier * (fy) for Inventory service check. If 0.0 then default to 0.8
+AllowPSOp       0.900  (mult)     Allow steel tension stress multiplier * (fy) for Operating service check. If 0.0 then default to 0.9
+
+*----- LRFR Allowable Stresses -----
+AllowPSOL       0.900  (mult)     Allow ... this factor only applies to the Permit load case.
+
+----- Transverse Analysis values -----
+SupportLoc    138.000  (ft)       If transverse analysis, distance to support location on bridge.
+LaneWidth      14.140  (ft)       Width of each lane.
+AxleDist        8.490  (ft)       Distance between axles.
+SkewAngle      45.500  (Degrees)  Not used by program but required for documentation.
+DLMult          7.000  (#)        Dead load multiplier to apply to Dead Load reaction.
+SupDLMult       7.000  (#)        Superimposed dead load multiplier to apply to Superimposed dead load reaction.
+SecEffMult      0.000  (#)        PS Secondary effects multiplier to apply to PS reaction.
+MaxPerm            25  (#)        Maximum number of permutations of truck lane loadings per load combination.
+IncBGrav            Y  (Yes/No)   Beam Gravity Effects. Use "N" so that beam gravity is not duplicated if used in applied reactions.
+NBIImpPM        1.300  (#)        Impact factor for positive moment for NBI Transverse Analysis.
+NBIImpNM        1.300  (#)        Impact factor for negative moment for NBI Transverse Analysis.
+NBIImpSH        1.300  (#)        Impact factor for shear for NBI Transverse Analysis.
+
+* =============================================================================================================================
+# [IMP & RES FACTORS]    0004  <Impact and Resistance Factors>
+* ==================================================================================================================================
+* Reference  AASHTO and WSDOT BDM for correct factors.
+* The "SPAN COND. CODE" and "SPAN CONDITION FIELD SURVEY COMMENTS" fields are for documentation only and
+*    not used by the program.
+*
+*
+    REDUNDANT                         SPAN
+MBR   CODE     RESISTANCE FACT.       COND
+#     N/R      MOMENT     SHEAR       CODE.    SPAN CONDITION FIELD SURVEY COMMENTS
+===    =        =.==       =.==        =      =====================================================================================
+  1    N        0.90       0.90        7
+  2    N        0.90       0.90        7
+  3    N        0.90       0.90        7
+  4    N        0.90       0.90        7
+
+* =============================================================================================================================
+# [NBI RES FACTORS]      0005  <Resistance Factors>
+* ==================================================================================================================================
+* Reference AASHTO and WSDOT BDM for correct factors based on rating method used. Default values shown assumes fair condition of
+* member; Adjust resistance factors as needed based on condition per the latest inspection report
+*
+* (LFR) Default Values: REINFORCED CONCRETE (No PS or PT):    MOM=0.90 SHR=0.85
+*                       PRESTRESSED CONCRETE ............: PosMOM=1.00 NegMOM=0.90 SHR=0.90
+*                       POST-TENSIONED ..................: PosMOM=0.95 NegMOM=0.90 SHR=0.90
+* For LRFR, see Section 5.5.4.2 of the LRFD Specification
+*
+*
+
+      CONVENTIONAL   --PRESTRESSED---   --POST-TENSION--
+MBR   REINFORCED     Pos   Neg          Pos   Neg
+#     MOM   SHR      MOM   MOM   SHR    MOM   MOM   SHR
+===   =.==  =.==     =.==  =.==  =.==   =.==  =.==  =.==
+  1   0.90  0.90     1.00  0.90  0.90   0.95  0.90  0.90
+  2   0.90  0.90     1.00  0.90  0.90   0.95  0.90  0.90
+  3   0.90  0.90     1.00  0.90  0.90   0.95  0.90  0.90
+  4   0.90  0.90     1.00  0.90  0.90   0.95  0.90  0.90
+
+* =============================================================================================================================
+# [FRAME DESCRIPTION]    1001  <Finite Element Model Description>
+* ==================================================================================================================================
+* MEMBER END NOMENCLATURE:  L = Left end for Horizontal members or
+*                               first defined member end for Columns and Braces.
+*                           R = Right end for Horizontal members or
+*                               Second defined member end for Columns and Braces.
+*
+* NODE NUMBER:  Node numbers for the Left and Right member ends.
+*
+* SUPPORT CODE:  Member End Boundary Condition:
+*                Pin = P,  Roller = R,  Fix = F   These are Nodal Fixity Codes.
+*                Hinge = H  Release moment continuity between member end and adjoining member(S)
+*
+* DIRECTION:  Horizontal = H,  Vertical = V,  Brace = B.
+*
+* COLUMN BASE OFFSET:  Distance a sloped column is offset from top to base.
+*                      If column base offset is positive this indicates a positive
+*                      slope from the base up to the bridge.
+*
+* SUPPORT WIDTH:  Entry valid for horizontal members.
+*                 if left blank, then loads at the centerline of the support are used.
+*
+* LLDF       Live Load Distribution Factor set ID (see 1004 and 1005). Only used for LRFD analysis.
+*
+*
+* COMMENTS:  Horizontal Members must be listed prior to listing Columns.
+*            Horizontal Members must begin with Member 1 and be numbered contiguously.
+*            Columns must begin with the Number 1 and be numbered contiguously.
+*            Braces must be listed last and use nodes already defined by the HORZ. or VERT. Members.
+*
+*
+     - MEMBER END --
+MBR  - CONDITIONS --         COLUMN
+OR    NODE    SUPPORT        BASE     - SUPPORT WIDTH -
+COL   NUMBER   CODE          OFFSET    NODE L   NODE R   LENGTH    LLDF
+ #    L   R    L  R     DIR   (ft)      (ft)     (ft)     (ft)     ID#
+===  === ===   =  =      =   ===.==    ===.==   ===.==   ===.==    ===
+  1    1   2             H               0.00     1.33     6.00      1
+  2    2   3             H               1.33     1.33    18.00      2
+  3    3   4             H               1.33     1.33    18.00      3
+  4    4   5             H               1.33     0.00     6.00      4
+  1    2   6      F      V     0.00                       20.00
+  2    3   7      F      V     0.00                       20.00
+  3    4   8      F      V     0.00                       20.00
+
+* =============================================================================================================================
+# [STAGED CONSTRUCTION]  1001A <Staged Construction Control Parameters>
+* ==================================================================================================================================
+* PRESTRESS BEAM ID: During STAGE 1 Analysis, each Prestress Beam is analyzed Separately from all other Stage 1 Prestress Beams.
+*
+*                    A STAGE 1 Prestress Beam is defined as a Member with boundary conditions as Pinned at the left end and Roller
+*                    at the right end. Assign a unique beam identification number for each Stage 1 Prestress Beam. starting with
+*                    number 1.
+*
+*                    If a Beam is comprised of more than one Member, then all Members of that Beam will have the same ID Number.
+*                    Members not included in a STAGE 1 Prestress Analysis should have this column left blank.
+*
+* FALSEWORK FLAG:  If a Member end is supported by falsework during this STAGE of analysis, then enter a 'Y' in this column.
+*                  The Reactions computed for this support will be applied as loads in STAGE 3.
+*
+* REACTION LOAD STAGE: The reactions caused by Dead Loads from STAGE 1 can be reapplied to the analysis in either STAGES 2 or 3.
+*                      Specify in this column which STAGE to apply Reaction Forces. A blank entry will default to STAGE 2.
+*
+*
+* STIFFNESS PROPERTY CODE: During each STAGE, the Stiffness Properties for each Member needs to be specified.
+*                          If this column is left blank, then that Member is not included in that STAGE of the analysis.
+*
+*                          The Two Stiffness CODES used are:
+*                            G - Girder Stiffness only.
+*                            C - Composite Girder and Slab Stiffness.
+*
+* SELF WEIGHT PROPERTY CODE: During any of the Three STAGES, you can select the amount of MEMBER SELF WEIGHT
+*                            that is to be included in the computations. Be careful not to "Double" a Members
+*                            Self Weight by specifying it more than once.
+*
+*                            The Three Self Weight CODES are:
+*                              S - Slab Weight only.
+*                              G - Girder Weight only.
+*                              C - Composite Girder and Slab Weight.
+*
+*
+              STAGE 1: SIMPLE SPAN             STAGE 2: FEM MODEL            STAGE 3: FEM MODEL
+              =============================    ===========================   =================
+              SIMP   STIFF  SELF     REACT.    FALSEWORK    STIFF  SELF      STIFF  SELF
+       DL     SPAN   PROP.  WEIGHT   LOAD      FLAG         PROP.  WEIGHT    PROP.  WEIGHT
+MBR    STAGE  BEAM   CODE   CODE     STAGE     LEFT  RIGHT  CODE   CODE      CODE   CODE
+ #     #      ID #   (G/C)  (G/S/C)  (2or3)    (Y/N) (Y/N)  (G/C)  (G/S/C)   (G/C)  (G/C/S)
+===    =      ===    =      =        =           =     =    =      =         =      =
+  1    3                                                                     C      C
+  2    3                                                                     C      C
+  3    3                                                                     C      C
+  4    3                                                                     C      C
+
+* =============================================================================================================================
+# [COLUMN PROPERTIES]    1002  <Column Section Properties>
+* ==================================================================================================================================
+* DEPTH:     Depth of Column in the direction of Member spans.
+*
+* COMMENTS:  Column numbers must match those in then 1001 data block.
+*
+* STAGE TO APPLY GRAVITY LOAD:  1) Leave blank for no Column Gravity Effects.
+*                               2) For Non-Prestress Bridges enter "1" to include Column Gravity Effects during Dead Load Analysis.
+*                               3) For Prestress Bridges enter Stage Number 2,3 OR 4. Stage 1 is invalid for Prestress Bridges.
+*
+      -- OPTION 1 --  -- OPTION 2 ---
+      DEPTH
+       OR                                         NO       STAGE TO
+COL   DIAM.   WIDTH    Izz     AREA       F'c     OF       APPLY
+ #     (in)    (in)   (ft)^4   (ft)^2    (ksi)  COLUMNS    GRAVITY LOAD
+===   ===.==  ===.==  ====.==  ====.==   ==.=    ==.==        =
+  1    36.00                              4.0     1.00        2
+  2    36.00                              4.0     1.00        2
+  3    36.00                              4.0     1.00        2
+
+* =============================================================================================================================
+# [LIVE LOAD DIST FACT]     1004  <Live Load Distribution Factors>
+* ==================================================================================================================================
+* Assign load distribution factors to members and provide information needed to compute them.
+*
+* Live Load Distribution Factors (LLDF) are computed as part of the LRFR extension to Bridg10.
+* Many parameters needed for the evaluation of the LLDF according to AASHTO 2010 LRFD Manual 4.6.2.2
+* are taken from cross section parameters given in cards 1001-1016.  However, several new geometric
+* parameters are needed to compute LLDF after AASHTO 2010 LRFD and shall be entered in this set of cards.
+*
+* AASHTO 2010 LRFD specifies (tables 4.6.2.2.1-1, 4.6.2.2.2b-1, 4.6.2.2.2d-1, 4.6.2.2.2e-1, 4.6.2.2.3a-1,
+* 4.6.2.2.3b-1, 4.6.2.2.3c-1) a range of applicability for which LLDFs can be computed.
+* Configurations that do not fall within this range require a more refined analysis (not covered by BRIDG10) and
+* LLDFs for such cases need to be provided through card "1005".
+*
+* In addition to computing LLDFs, the user can override some or all LLDFs for any given member
+* using card "1005" even for bridges that fall within the range of applicability.
+*
+* Variables:
+*
+*    MBR:            Member ID for which this set of information applies
+*    ID:             Identification of LLDFs from card 1005;
+*                    used provide values from a refined analysis OR to override computed values.
+*    SECT TYPE:      Cross Section Type according to AASHTO 2010 LRFD Manual - Table 4.6.2.2.1-1
+*    NDL:            Number of Design Lanes
+*    EFF LENGTH:     Effective span length (in feet) according  AASHTO 2010 LRFD Manual - Table C4.6.2.2.1-1
+*                    If nothing given, the span length from model will be used.
+*    SINGLE UNIT:    (Y/N) does cross section act as a single unit?              : DEFAULT = Yes
+*    THETA SKEW:     Theta Skew = skew angle in degrees between adjacent girders : DEFAULT = 0.0
+*    NUMBER BEAMS:   If not entered then will use "Bridge Width / Beam Width"
+
+
+                                                  DIST
+            EFF           THETA  SINGLE           CENTR                   INTL   EXT   LEFT    RGHT
+LLDF  SECT  LENGTH         SKEW   UNIT    NUMBER  LINE    NUM    NUM      SPC    SPC   OVRHG   OVRHG
+ID#   TYPE  (FT)    NDL   (deg)   (Y/N)   BEAMS   (FT)    CELLS  BRACES   (FT)   (FT)   (FT)   (FT)
+===    =    ===.==  ===   ===.==   =       ===    ===.==   ==     ==       ==.==  ==.==  ==.==  ==.==
+
+* =============================================================================================================================
+# [EXPLICIT LLDF]     1005  <Explicit Live Load Distribution Factors>
+* ==================================================================================================================================
+* COMMENTS:  For LRFD analysis the program will compute these factors unless entered here.
+*            Factors entered here will override any computed factors.
+*            You do not need to enter all values, any values not entered will be computed by the program
+*            if sufficient information is given in CARD 1004.
+*
+*            Note: If only some values are entered, these are assumed to be for an interior girder
+*                  when computing missing values using the AASHTO tables and information from CARD 1004.
+*
+*            For LFR (FHWA or STD methods) a single moment factor, DF, is used (previously specified in CARD 1050).
+*            For LFR method a single DF is entered for both moment and shear.
+*
+*  ID#    Unique ID for a set of interior and exterior factors.
+*  SD     Shear distribution factor (Legal, Design and Emergency Vehicles)
+*  MD     Moment distribution factor (Legal, Design and Emergency Vehicles)
+*  SP     Shear permit distribution factor
+*  MP     Moment permit distribution factor
+*  DF     Moment and Shear distribution factor for LFR (FHWA) method
+*
+
+ID#     SD   MD   SP   MP    LFR DF
+===    =.== =.== =.== =.==    =.==
+
+* =============================================================================================================================
+# [CIP T-BEAM MEMBER]    1012  <Cast-In-Place T-Beam Member Definition>
+* ==================================================================================================================================
+* REFERENCE END FLAG:  L = Dimensioned from Left End of Member,
+*                      S = Symmetric about Mid-Member. (Not symmetric about Span)
+* If only One Beam, then use the LEFT EXTERIOR GIRDER.
+* If Two Beams, then use the LEFT AND RIGHT EXTERIOR GIRDERS.
+*
+*
+                                                       LEFT                RIGHT
+                                                       EXT     INT   INT   EXT     - LEFT OVERHANG - - RIGHT OVERHANG-
+           REF  BARR       SLAB   SLAB  FILLET   WEB   GIRDER  NO.   GRD   GIRDER  OVER   INT   EXT  OVER   INT   EXT
+MBR  DIST  END  S/W   F'c  WIDTH  THICK b X h   DEPTH  WIDTH   GRD  WIDTH  WIDTH   HANG  THICK THICK HANG  THICK THICK
+ #   (ft)  FLAG ID#  (ksi) (ft)   (in)   (in)   (in)   (in)    (#)  (in)   (in)    (ft)  (in)  (in)  (ft)  (in)  (in)
+=== ===.==  =   ===  ==.=  ===.== ==.== ==X==  ===.==  ==.==   ==   ==.==  ==.==   ==.== ==.== ==.== ==.== ==.== ==.==
+  1   0.00  L     0   4.0    0.00  0.00  0X 0   39.00  48.00   0     0.00   0.00    0.00  0.00  0.00  0.00  0.00  0.00
+  2   0.00  L     0   4.0    0.00  0.00  0X 0   39.00  48.00   0     0.00   0.00    0.00  0.00  0.00  0.00  0.00  0.00
+  3   0.00  L     0   4.0    0.00  0.00  0X 0   39.00  48.00   0     0.00   0.00    0.00  0.00  0.00  0.00  0.00  0.00
+  4   0.00  L     0   4.0    0.00  0.00  0X 0   39.00  48.00   0     0.00   0.00    0.00  0.00  0.00  0.00  0.00  0.00
+
+* =============================================================================================================================
+# [SHEAR STEEL]          1021  <Shear Steel Data Entry>
+* ==================================================================================================================================
+* S  = Shear Reinforcement Spacing.
+* SX = crack spacing parameter used to compute effective crack spacing parameter sxe
+*      (AASHTO LRFD, Section 5.8.3.4.2, Figure 5.8.3.4.2-3)
+*      -> enter 0.00 or no value for SX if insufficient longitudinal shear reinforcement
+*
+           REF          STEEL
+MBR  DIST  END    S     AREA     SX
+ #   (ft)  FLAG  (in)   (in)^2  (in)
+=== ===.==  =    ==.==  ===.==  ==.==
+  1   0.50  L     6.00    1.24   9.00
+  2   1.42  L     3.50    1.24   9.00
+  2   3.75  L    11.00    1.24   9.00
+  3   1.42  L    11.00    1.24   9.00
+  3  14.25  L     3.50    1.24   9.00
+  4   1.42  L     6.00    1.24   9.00
+
+* =============================================================================================================================
+# [TOP STEEL(B)]         1024  <Top Steel (Neg.Mom.) Alternate Entry Method>
+* ==================================================================================================================================
+*
+* MARK:            For user reference only, not used by the program.
+* START:           May start with a negative number (i.e. before member start or run past end of member or bridge.
+* END TYPE:        Standard Hook = H,  Straight = S.
+* DEFAULT VALUES:  Splice Class = N, Epoxy Coat = N, End Type = S.
+* COVER ABOVE BAR is measured to the top of the bar
+* COVER BELOW BAR is measured to the bottom of the bar
+*
+* --------- SPLICE CLASSES --------
+* A = Class A Splice
+* B = Class B Splice
+* C = Class C Splice
+* F = Field Weld
+* M = Mechanical Splice
+* N = Not Spliced
+* H = Use AASHTO 8.29.3.2 Criteria ( applicable for hooks only ).
+*
+                                                           COVER  COVER  | LEFT END COND | RIGHT END COND |
+                      BAR   NUMBER  EPOXY  BAR     LATRL.  ABOVE  BELOW. |               |                |
+ MBR  START    MARK   SIZE    OF    COAT   LENGTH  SPAC.   BAR    BAR    | END   SPLICE  |  END   SPLICE  |
+ #    (ft)    NUMBER   ##    BARS   (Y/N)  (ft)    (in)    (in)   (in)   | TYPE  CLASS   |  TYPE  CLASS   |
+===   ===.==  ======   ==  ====.==    =    ===.==  ==.==   ==.==  ==.==  |  =      =     |   =      =     |
+  1     0.00     411   14     4.00    N     48.00   5.00    2.00  37.00     H      N         H      N
+  1     0.00     412   11     6.00    N     48.00   5.00    2.00  37.00     H      N         H      H
+
+* =============================================================================================================================
+# [BOTTOM STEEL(B)]      1025  <Bottom Steel (Pos.Mom.) Alternate Entry Method>
+* ==================================================================================================================================
+*
+* MARK:            For user reference only, not used by the program.
+* START:           May start with a negative number (i.e. before member start or run past end of member or bridge.
+* END TYPE:        Standard Hook = H,  Straight = S.
+* DEFAULT VALUES:  Splice Class = N, Epoxy Coat = N, End Type = S.
+* COVER BELOW BAR is measured to the bottom of the bar
+*
+* --------- SPLICE CLASSES --------
+* A = Class A Splice
+* B = Class B Splice
+* C = Class C Splice
+* F = Field Weld
+* M = Mechanical Splice
+* N = Not Spliced
+* H = Use AASHTO 8.29.3.2 Criteria ( applicable for hooks only ).
+*
+                                                           COVER         | LEFT END COND | RIGHT END COND |
+                      BAR   NUMBER  EPOXY  BAR     LATRL.  BELOW         |               |                |
+MBR   START    MARK   SIZE    OF    COAT   LENGTH  SPAC.   BAR           | END   SPLICE  |  END   SPLICE  |
+ #    (ft)    NUMBER   ##    BARS   (Y/N)  (ft)    (in)    (in)          | TYPE  CLASS   |  TYPE  CLASS   |
+===   ===.==  ======   ==  ====.==    =    ===.==  ==.==   ==.==         |  =      =     |   =      =     |
+  1     0.00     408    6     4.00    N     48.00   4.50    1.50            S      N         S      N
+  1     2.00     409   10     7.00    N     44.00   4.50    1.50            S      N         S      N
+
+* =============================================================================================================================
+# [DEAD LOADS]           1045  <Define Dead Loads>
+* ==================================================================================================================================
+* Uniform loads entered in this data block will be applied over the "ENTIRE BRIDGE".
+* Load Multiplication is performed due to multiple elements.
+* The 1047 data block is used to distribute the applied Dead Loads to each Member.
+* Additional loads on a per Member basis can be applied using the 1046 data block.
+* Only one entry for each load case is allowed.
+*
+* DC ... dead load using DC-load factor (LRFR)
+* SC ... superimposed dead load using DC-load factor (LRFR)
+* SW ... superimposed dead load using DW-load factor (LRFR)
+*
+                 DL OR            UNIFORM
+             LC  SDL              LOAD
+LC NAME      #   (DC/SC/SW)       (k/ft)       NOTE (optional)
+==========   =    ==              =====.===    ====================================================================================
+Slab Wear    1    DC                  0.000
+Grd Pad      2    DC                  0.000
+Misc DL-A    3    DC                  0.000     self wt internally calculated
+Misc DL-B    4    DC                  0.000
+Railing      1    SC                  0.000
+Barrier      2    SC                  0.000
+SideWalk     3    SC                  0.000
+Overlay      4    SC                  0.000
+Utilities    5    SC                  0.000
+Misc SDL     6    SC                  0.000
+
+* =============================================================================================================================
+# [TRUCK DEFINITION]     1049  <Truck Definitions>
+* ==================================================================================================================================
+* If there are more than five point loads,
+* continue on next line with same load number.
+*
+* If Lane Loading values are included, and the Truck input requires more
+* than one line, enter the Lane Loading data only on the first line.
+*
+* TRUCK TRAIN:  Y = >> Two trucks used for negative moment
+*                   >> One truck used for  positive moment
+*                   >> One truck used for positive and negative shear
+*               N = >> One truck used for positive and negative moment and shear.
+*
+* RESERVED NAMES: Do NOT use these truck names or else then may be changed by the auto-LRFD load generator
+*      HL-93_14_14_Truck
+*      HL-93_14_22_Truck
+*      HL-93_14_30_Truck
+*      HL-93_TANDEM
+*      HL-93_14_14_TRAIN
+*      UNIFORM_LANE_LOAD
+*      TYPE_3_Truck
+*      TYPE_3S2_Truck
+*      TYPE_3-3_Truck
+*      NRL_Truck
+*      LEGAL_LANE
+*      LEGAL_LANE_2
+*      OVERLOAD_1_Truck
+*      OVERLOAD_2_Truck
+*      EV2_Truck
+*      EV3_Truck
+*
+
+                                                                                          --- ALTERNATE ------    --- LRFD ----
+LIVE                                                                                       --- LANE LOADING ---   --- ONLY ----
+LOAD /                                                                                     UNIF.   MOM.   SHEAR     LL    TRUCK
+TRUCK                              P1    D1      P2    D2      P3    D3      P4    D4      LOAD    RIDER  RIDER   IMPACT  TRAIN
+#     Live Load / Truck Name    (kips) (ft)   (kips) (ft)   (kips) (ft)   (kips) (ft)     (klf)   (kips) (kips)    (Y/N)  (Y/N)
+==    ======================    ===.=  ==.=   ===.=  ==.=   ===.=  ==.=   ===.=  ==.=     ===.==  ==.==  ==.==       =      =
+ 1    HL-93_14_14_Truck           8.0  14.0    32.0  14.0    32.0                                                    Y      N
+ 2    HL-93_14_22_Truck           8.0  14.0    32.0  22.0    32.0                                                    Y      N
+ 3    HL-93_14_30_Truck           8.0  14.0    32.0  30.0    32.0                                                    Y      N
+ 4    HL-93_TANDEM               25.0   4.0    25.0                                                                  Y      N
+ 5    HL-93_14_14_TRAIN           7.2  12.6    28.8  12.6    28.8                                                    Y      Y
+ 6    UNIFORM_LANE_1KPF                                                                     1.00                     N      N
+ 7    TYPE_3_Truck               16.0  15.0    17.0   4.0    17.0                                                    Y      N
+ 8    TYPE_3S2_Truck             10.0  11.0    15.5   4.0    15.5  22.0    15.5   4.0                                Y      N
+ 8                               15.5                                                                                Y      N
+ 9    TYPE_3-3_Truck             12.0  15.0    12.0   4.0    12.0  15.0    16.0  16.0                                Y      N
+ 9                               14.0   4.0    14.0                                                                  Y      N
+10    NRL_Truck                   6.0   6.0     8.0   4.0     8.0   4.0    17.0   4.0                                Y      N
+10                               17.0   4.0     8.0   4.0     8.0   4.0     8.0                                      Y      N
+11    LEGAL_LANE                  9.0  15.0     9.0   4.0     9.0  15.0    12.0  16.0                                Y      N
+11                               10.5   4.0    10.5                                                                  Y      N
+12    LEGAL_LANE_2                9.0  15.0     9.0   4.0     9.0  15.0    12.0  16.0                                Y      N
+12                               10.5   4.0    10.5  30.0     9.0  15.0     9.0   4.0                                Y      N
+12                                9.0  15.0    12.0  16.0    10.5   4.0    10.5                                      Y      N
+13    OVERLOAD_1_Truck           10.0  10.0    21.5   4.0    21.5  12.0    21.5   4.0                                Y      N
+13                               21.5                                                                                Y      N
+14    OVERLOAD_2_Truck           12.0  10.0    21.5   4.0    21.5   6.0    22.0  16.0                                Y      N
+14                               21.5   4.0    21.5   6.0    22.0  14.0    21.5   4.0                                Y      N
+14                               21.5   6.0    22.0                                                                  Y      N
+15    EV2                        24.0  15.0    33.5                                                                  Y      N
+16    EV3                        24.0  15.0    31.0   4.0    31.0                                                    Y      N
+
+* =============================================================================================================================
+# [TRANSVERSE ANALYSIS]  1100  <Transverse Beam Analysis>
+************************************************************************************************************************************
+*
+*   T R A N S V E R S E     B E A M     D A T A
+*
+=***********************************************************************************************************************************
+
+* =============================================================================================================================
+# [TR-BEAM/SLAB/XBEAM]   1101  <Transverse Beam/Slab/Cross-beam Description>
+* ==================================================================================================================================
+* COMMENTS:  Distance from left edge of Transverse Beam to left edge of Slab is
+*            Positive if the Slab edge is to the right of the Transverse Beam
+*            and negative if to the left.
+*
+*            Only one entry is allowed.
+*
+*            Default values for Transfer Members: E=500000 A=99.0 I=99.0
+*
+                                                  DISTANCE FROM
+                           DISTANCE FROM          LEFT EDGE OF
+TOTAL    -- SHY DIST.--    TOP OF SLAB TO         TRANSVERSE BEAM       -------------- LOAD TRANSFER MEMBERS ---------------
+SLAB     LEFT     RIGHT    TOP OF TRANSVERSE      TO LEFT EDGE OF       ---------SLAB-----------    --- TRANSFER MEMBER ----
+WIDTH    SIDE     SIDE     BEAM                   SLAB                     E       Area     I         E        Area     I
+ (ft)     (ft)     (ft)     (ft)                   (ft)                  (Ksf)    (ft)^2  (ft)^4     (Ksf)    (ft)^2  (ft)^4
+===.==   ===.==   ===.==   ===.==                 ===.==                ========  ===.==  ===.==    ========  ===.==  ===.==
+ 53.27     8.08     8.08     5.00                  -2.64                  500000   99.00   99.00      500000   99.00   99.00
+
+* =============================================================================================================================
+# [TR-LOAD TRANSFER LOC] 1102  <Transverse Beam Analysis Transfer Beam Locations>
+* ==================================================================================================================================
+* COMMENTS:  For continuous support between Slab and Beam, use a delta distance
+*            of IDIST (as defined on the "PARM" entry) and a duplicate load
+*            count of 9999.
+*
+*            For single transfer location, leave "Delta" and "Multiplier" BLANK.
+*
+*            Repeat this data block for as many load transfer locations as necessary.
+*
+DISTANCE      DELTA
+FROM          DISTANCE      DUPLICATE
+LEFT EDGE     TO NEXT       LOAD POINT
+OF XBEAM      LOAD POINT    MULTIPLER
+ (ft)          (ft)          (#)
+===.==        ===.==        ======
+  1.87          7.37             7
+
+* =============================================================================================================================
+# [TR-REACTIONS]         1105  <Transverse Beam Analysis Reaction Loads Entry>
+* ==================================================================================================================================
+* COMMENT:
+*
+*      LRFR considers two types of secondary dead loads (SDL):
+*          SDLC ... SDL portion to be factored using the DC-load factor
+*          SDLW ... SDL portion to be factored using the DW-load factor
+*
+*      LFR:  both components SDLC and SDLW will be added to SDL and use the laod factor associated with SDL.
+*      LRFR WARNING: any loads entered as SDL will be treated as SDLW and the DW-load factor will be applied.
+*
+*      HRZM and HRZF can both be used together.
+*      The Total horizontal load is equally divided and applied at the Transfer Beam Locations.
+*
+* Type Keywords - DEAD = Dead Load Reactions
+*                 SDL  = Superimposed Dead Load Reactions used for LFR(FHWA)
+*                 SDLC = Superimposed Dead Load Reactions using DC-load factor (LRFR)
+*                 SDLW = Superimposed Dead Load Reactions using DW-load factor (LRFR)
+*                 PS   = Prestress Reactions
+*                 UNL  = Uniform Load of (1) KIP PER FOOT across the Bridge
+*                 Txxx = Truck Load Reactions, where xxx is the Truck Number.
+*                        Truck Numbers must begin with 001 and increment contiguously.
+*                 HRZM = Percent of "DL+SDL" to apply as a horizontal load on the Transverse Beam.
+*                        enter HRZM as a whole number percentage. Example 20 = 20% of "DL+SDL".
+*                 HRZF = Additional horizontal load ( KIPS ) on Transverse Beam.
+*
+* STAGE NO.   For analysis with Prestress Transverse Beams, specify the Stage of
+*             Construction for application of the "DEAD","PS","HRZM" AND "HRZF" loads.
+*
+*             The Default is Stage 3, if column is left blank .
+*             This column is ignored for the "UNL" and "Txxx" reactions.
+*
+*
+* Truck Range  The range of motion can be restricted for each truck by specifying the start and
+*              and end distances from the left edge.  If a truck is COMPLETELY outside the range
+*              specified, its axle load is given a value of Zero.  If these values are left blank
+*              then the full range of motion is used.
+*
+*
+                           TRUCK RANGE
+       REACTION    STAGE   START    END
+TYPE   (K)           #     (ft)    (ft)
+====  =====.===      =    ===.==  ===.==
+DEAD     92.097
+PS        0.000
+SDLC     23.153
+SDLW      0.000
+UNL      84.500
+T001     65.373
+T002     62.343
+T003     59.314
+T004     48.817
+T005     58.836
+T006     84.500
+T007     46.355
+T008     60.686
+T009     64.379
+T010     73.751
+T011     48.284
+T012     60.355
+T013     86.201
+T014    160.278
+T015     53.240
+T016     80.272
+
+* =============================================================================================================================
+# [TR-LOAD COMBINATIONS] 1110  <Transverse Beam Analysis Load Combinations>
+* ==================================================================================================================================
+* COMMENTS:
+*   Cross Beam loading is by Truck Numbers used in the 1105 data block.
+*   Enter one line per load combination.
+*   Load factors are for 1,2,3 and 4 or more lanes loaded.
+*   For TRUCK-A and optionally TRUCK-B enter the truck reaction number, and the the maximum number of lanes to load.
+*   The program will use all the combinations possible for the trucks listed.
+*   Typical Lane Load factors: For 1&2 lanes loaded=1.0, 3 lanes loaded=0.9, 4 or more lanes loaded=0.75
+*
+* MULTIPLIERS:
+*   - LIVE LOAD FACTOR in this CARD are for backward compatibility with LFR(Std) method only.
+*   - IMPACT FACTOR is used in LFR (STD) backward compatibility only.
+*   - For LFR(FHWA) and LRFR see comments below.
+*
+* LFR(FHWA):
+*   - MULTIPLIERS given in this CARD will be ignored and overwritten by LRFR specific factors.
+*        Operating and Inventory factors as defined in CARD 0003 are used.
+*        Impact factors used are NBIImpPM, NBIImpNM and NBIImpSH (only NBIImpPM is reflected below).
+*   - RATING TYPE is ignored (LRFR only).
+*
+* LRFR:
+*   - LIVE LOAD FACTOR given in this CARD will be ignored and overwritten by LRFR specific factors.
+*         Operating, Inventory, Legal and Permit factors as defined in CARD 0003 are used.
+*   - IMPACT FACTOR given in this CARD will be ignored and overwritten by LRFR specific factors defined in CARD 0003.
+*          The impact factor will be applied to TRUCK-A, TRUCK-B, and the ADDED UNIF. LOAD (if any).
+*          NO impact factor will be applied to the LANE LOAD.
+*   - Load Factors are controlled through the RATING TYPE as follows:
+*       H: Inventory&Operating: Use Inv2LLF, Oper2LLF, HL93IMP
+*       L:Legal/NRL             Use LegalLLF, LegalIMP
+*       P:Permit                Use PermitLLF, LegalIMP (this type replaces the old OverLoad Flag)
+*       E:Emergency Vehicle     Use EVehicleLLF, LegalIMP, Permit lane-load distribution factor
+*   - LANE LOAD REACTION is used to superimpose the effect of a lane load WITHOUT impact over a truck load.
+*       The LOAD given is the reaction force for ONE entire lane loaded with the desired superimposed
+*       lane load (from Longitudinal analysis). Note that the reaction shown in the "rea" for the UNIFORM_LANE_1KPF are based on 1 k/ft.
+*       To obtain the proper HL 93 Lane reaction portion, values shown have to be multiplied by 0.64.
+*
+       .--RATING TYPE
+       |  .--OVERLOAD FLAG              --MULTIPLIERS--  ADDED      TRUCK-A    TRUCK-B    LANE LOAD
+LOAD   |  |                             LIVE             UNIF.      -------    -------    ---------   MULT PRESENCE FACTOR
+COMB   |  |                             LOAD     IMPACT  LOAD       LC         LC         REACTION    FOR LANES LOADED
+#     RTP O  LOAD COMBINATION TITLE     FACTOR   FACTOR  (KPF)      #  LANES   #  LANES    (KIPS)     1     2     3     4+
+==     =  =  =========================  ===.==   ===.==  ===.==     ==  ==     ==  ==      ===.===    =.==  =.==  =.==  =.==
+ 1     H     HL93                         1.65     1.33    0.00      1   2                  54.080    1.20  1.00  0.85  0.65
+ 2     L     AASHTO 1                     1.65     1.10    0.00      7   2                   0.000    1.20  1.00  0.85  0.65
+ 3     L     AASHTO 2                     1.65     1.10    0.00      8   2                   0.000    1.20  1.00  0.85  0.65
+ 4     L     AASHTO 3                     1.65     1.10    0.00      9   2                   0.000    1.20  1.00  0.85  0.65
+ 5     L     NRL                          1.65     1.10    0.00     10   2                   0.000    1.20  1.00  0.85  0.65
+ 6     P  Y  OL 1 + Controlling Legal     1.30     1.10    0.00     13   1     10   1        0.000    1.00  1.00  0.85  0.65
+ 7     P  Y  OL 2 + Controlling Legal     1.30     1.10    0.00     14   1     10   1        0.000    1.00  1.00  0.85  0.65
+ 8     E     EV2 + Controlling Legal      1.30     1.10    0.00     15   1     10   1        0.000    1.20  1.00  0.85  0.65
+ 9     E     EV3 + Controlling Legal      1.30     1.10    0.00     16   1     10   1        0.000    1.20  1.00  0.85  0.65
+
+* =============================================================================================================================
+# [END DATA ENTRY]             <End of standard "BRIDG" data entry blocks>
+= ==================================================================================================================================
+
+* =============================================================================================================================
+# [AR:COMP.TRAN.SECT]    5100  <Composite Transformed Section Properties>
+* ==================================================================================================================================
+*
+*  Definition of terms:
+*      Izz       --- Moment of Inertia.
+*      S_top     --- Section Modulus to top fiber.
+*      S_top grd --- Section Modulus to top fiber of girder.
+*      S_bot     --- Section Modulus for bottom fiber.
+*      NA        --- Neutral axis from top slab.
+*      e         --- Composite Modulus of Elasticity.
+*      f'c       --- Composite concrete strength.
+*
+                                                      S_top
+MBR  DIST   DEPTH   NA     AREA      Izz     S_top     grd     S_bot     e     f'c
+  #  (ft)   (ft)   (ft)   (ft**2)  (ft**4)  (ft**3)  (ft**3)  (ft**3)  (ksi)  (ksi)
+===  ===.=  ==.==  ==.==  ====.==  ====.==  ====.==  ====.==  ====.==  =====  ==.==
+  1    0.0   3.25   1.62    13.00    11.44    -7.04    -7.04     7.04   4028   4.00
+  2    0.0   3.25   1.62    13.00    11.44    -7.04    -7.04     7.04   4028   4.00
+  3    0.0   3.25   1.62    13.00    11.44    -7.04    -7.04     7.04   4028   4.00
+  4    0.0   3.25   1.62    13.00    11.44    -7.04    -7.04     7.04   4028   4.00
+
+* =============================================================================================================================
+# [AR:GIRDER SECT PROP]  5101  <Non-Composite Girder Section Properties>
+* ==================================================================================================================================
+*
+*  Definition of terms:
+*      Izz    --- Moment of Inertia.
+*      S_top  --- Section modulus for top fiber.
+*      S_bot  --- Section modulus for bottom fiber.
+*      NA     --- Neutral axis from top of girder.
+*
+MBR  DIST   DEPTH   NA     AREA      Izz     S_top    S_bot     e     f'c
+ #   (ft)   (ft)   (ft)   (ft**2)  (ft**4)  (ft**3)  (ft**3)  (ksi)  (ksi)
+===  ===.=  ==.==  ==.==  ====.==  ====.==  ====.==  ====.==  =====  ==.==
+  1    0.0   3.25   1.62    13.00    11.44    -7.04     7.04   4028   4.00
+  2    0.0   3.25   1.62    13.00    11.44    -7.04     7.04   4028   4.00
+  3    0.0   3.25   1.62    13.00    11.44    -7.04     7.04   4028   4.00
+  4    0.0   3.25   1.62    13.00    11.44    -7.04     7.04   4028   4.00
+
+* =============================================================================================================================
+# [AR:ULTIMATE CAPACITY] 5202  <Span Ultimate Capacities>
+* ==================================================================================================================================
+*  Values are printed for 1/10 points ( TP = 0 thru 10 )
+*  Values are for nearest integration point to actual tenth point.
+*  Shear capacities are listed by Load Combination. If more then 5 Load Combinations are active, then continued on next line.
+*
+                                ------------- SHEAR CAPACITY BY LOAD COMBINATION NUMBER ---------------------------
+                -- MOMENT --    -- 1 (6,...) --  -- 2 (7,...) --  -- 3 (8,...) --  -- 4 (9,...) --  -- 5 (10,..) --
+SPAN    DIST    POS     NEG      POS     NEG      POS     NEG      POS     NEG      POS     NEG      POS     NEG
+ #  TP  (ft)   (k-ft)  (k-ft)   (kips)  (kips)   (kips)  (kips)   (kips)  (kips)   (kips)  (kips)   (kips)  (kips)
+=== ==  ===.=  ======  ======   ======= =======  ======= =======  ======= =======  ======= =======  ======= =======
+  1  0    0.0       2       2       213    -213      332    -213      300    -213      213    -213      213    -213
+                                    213    -213      213    -213      213    -213      213    -213
+  1  1    0.6      98     605       461    -460      461    -461      461    -461      461    -461      461    -461
+                                    461    -461      461    -460      461    -461      461    -461
+  1  2    1.2     195    1186       921    -909      919    -916      919    -915      919    -915      919    -914
+                                    919    -915      920    -912      919    -914      919    -914
+  1  3    1.8     195    1855       899    -887      898    -894      898    -893      898    -893      898    -892
+                                    898    -893      899    -889      898    -892      898    -892
+  1  4    2.4     286    1871       883    -874      882    -879      882    -879      882    -878      882    -878
+                                    882    -878      883    -876      882    -878      882    -878
+  1  5    3.0     554    1871       853    -842      852    -849      852    -848      852    -848      852    -847
+                                    852    -847      853    -844      852    -847      852    -847
+  1  6    3.6     730    1871       835    -822      833    -829      833    -829      833    -828      833    -828
+                                    833    -828      834    -825      833    -828      833    -827
+  1  7    4.2     904    1871       817    -803      815    -811      816    -810      816    -810      816    -809
+                                    816    -810      817    -806      816    -809      816    -809
+  1  8    4.8    1138    1871       796    -779      793    -789      793    -787      793    -787      794    -786
+                                    794    -787      795    -783      794    -786      794    -786
+  1  9    5.4    1138    1871       796    -777      793    -788      794    -787      794    -787      794    -786
+                                    794    -786      795    -781      794    -786      794    -785
+  1 10    6.0    1138    1871       796    -776      793    -788      794    -786      794    -786      794    -785
+                                    794    -786      795    -780      794    -785      794    -784
+ 
+  2  0    6.0    1138    1871       304    -350      332    -346      329    -346      328    -346      326    -346
+                                    326    -346      313    -348      326    -346      324    -347
+  2  1    7.8    1138    1871      1082   -1105     1097   -1101     1096   -1102     1095   -1102     1095   -1102
+                                   1093   -1102     1089   -1103     1095   -1102     1094   -1102
+  2  2    9.6    1138    1871      1053   -1158     1115   -1145     1107   -1146     1105   -1147     1101   -1148
+                                   1103   -1147     1074   -1153     1101   -1148     1097   -1148
+  2  3   11.4    1138    1871       550    -635      595    -619      589    -621      588    -622      585    -623
+                                    587    -622      567    -629      585    -623      582    -623
+  2  4   13.2    1138    1871       527    -643      591    -627      583    -629      581    -629      575    -630
+                                    580    -629      550    -637      575    -630      572    -631
+  2  5   15.0    1138    1871       497    -637      565    -607      557    -610      554    -611      549    -613
+                                    553    -612      521    -625      549    -613      545    -615
+  2  6   16.8    1138    1871       559    -473      572    -544      571    -535      571    -532      570    -526
+                                    570    -527      564    -493      570    -526      569    -522
+  2  7   18.6    1138    1871       551    -446      551    -517      551    -508      551    -505      551    -499
+                                    551    -497      551    -466      551    -500      551    -496
+  2  8   20.4    1138    1871       581    -500      581    -556      581    -549      581    -547      581    -542
+                                    581    -541      581    -464      581    -498      581    -494
+  2  9   22.2    1138    1871       581    -500      581    -556      581    -549      581    -547      581    -542
+                                    581    -541      581    -516      581    -543      581    -540
+  2 10   24.0    1138    1871       580    -489      580    -552      580    -543      580    -541      580    -536
+                                    580    -535      580    -514      580    -543      580    -534
+ 
+  3  0   24.0    1138    1871       267    -344      319    -344      313    -344      311    -344      306    -344
+                                    305    -344      287    -344      309    -344      304    -344
+  3  1   25.8    1138    1871       499    -580      555    -580      548    -580      546    -580      542    -580
+                                    540    -580      515    -580      542    -580      539    -580
+  3  2   27.6    1138    1871       443    -580      555    -580      548    -580      546    -580      542    -580
+                                    540    -580      515    -580      542    -580      539    -580
+  3  3   29.4    1138    1871       445    -550      516    -550      506    -550      504    -550      498    -550
+                                    496    -550      464    -550      498    -550      494    -550
+  3  4   31.2    1138    1871       450    -554      520    -554      511    -554      509    -554      503    -554
+                                    506    -554      474    -554      503    -554      499    -554
+  3  5   33.0    1138    1871       637    -499      608    -567      611    -558      612    -556      614    -550
+                                    612    -555      626    -523      614    -550      616    -547
+  3  6   34.8    1138    1871       646    -525      626    -589      629    -580      630    -578      632    -573
+                                    630    -577      639    -548      632    -573      633    -570
+  3  7   36.6    1138    1871       638    -553      622    -597      624    -592      624    -590      625    -587
+                                    624    -590      632    -569      625    -587      626    -585
+  3  8   38.4    1138    1871       639    -546      628    -593      629    -587      630    -585      630    -582
+                                    630    -584      634    -562      630    -582      631    -579
+  3  9   40.2    1138    1871      1116   -1083     1113   -1111     1113   -1110     1113   -1110     1113   -1110
+                                   1113   -1108     1115   -1098     1113   -1110     1113   -1110
+  3 10   42.0    1138    1871      1093   -1030     1086   -1069     1087   -1064     1087   -1063     1088   -1060
+                                   1087   -1060     1090   -1043     1088   -1060     1088   -1058
+ 
+  4  0   42.0    1138    1871       347    -361      355    -359      354    -359      354    -359      353    -359
+                                    354    -359      350    -360      353    -359      353    -359
+  4  1   42.6    1138    1871       348    -361      355    -359      354    -359      354    -359      354    -359
+                                    354    -359      351    -360      354    -359      353    -359
+  4  2   43.2    1138    1871       349    -361      355    -359      355    -359      355    -359      354    -359
+                                    354    -359      352    -360      354    -359      354    -359
+  4  3   43.8     991    1871       798    -810      804    -808      804    -808      803    -808      803    -808
+                                    803    -808      800    -809      803    -808      803    -808
+  4  4   44.4     818    1871       816    -827      822    -825      821    -825      821    -825      821    -825
+                                    821    -826      818    -826      821    -825      820    -826
+  4  5   45.0     554    1871       845    -854      850    -853      850    -853      850    -853      849    -853
+                                    850    -853      847    -854      849    -853      849    -853
+  4  6   45.6     376    1871       866    -874      871    -873      870    -873      870    -873      870    -873
+                                    870    -873      868    -874      870    -873      870    -873
+  4  7   46.2     195    1871       888    -895      892    -894      892    -894      892    -894      891    -894
+                                    892    -894      890    -895      891    -894      891    -894
+  4  8   46.8     195    1613       898    -907      903    -906      903    -906      903    -906      902    -906
+                                    902    -906      900    -907      902    -906      902    -906
+  4  9   47.4     147    1104       920    -923      922    -923      921    -923      921    -923      921    -923
+                                    921    -923      920    -923      921    -923      921    -923
+  4 10   48.0       2       2       503   -1035      711   -1035      503   -1035      503   -1035      503   -1035
+                                    503   -1035      503   -1035      503   -1035      503   -1035
+ 
+
+* =============================================================================================================================
+# [AR:DEAD LOADS (WORK)] 5300  <Working Dead Load, Superimposed Dead Load, Secondary Shears and Moments>
+* ==================================================================================================================================
+*  Values are printed for 1/10 points ( TP = 0 thru 10 )
+*  Moments are interpolated between two nearest integration points (IP).
+*  Shear   values are for nearest integration point (IP).
+*  Superimposed Dead Load (SDL):
+*    SDL-DC: portion of SDL using DC-factor (LRFR)
+*    SDL-DW: portion of SDL using DW-factor (LRFR)
+*
+               ---- DEAD LOAD ---  ------- SUPERIMPOSED DEAD LOAD -------  --- SECONDARY ----
+SPAN    DIST    MOMENT    SHEAR    MOMENT-DC SHEAR-DC  MOMENT-DW SHEAR-DW     MOMENT    SHEAR
+ #  TP  (ft)    (k-ft)    (kips)    (k-ft)    (kips)    (k-ft)    (kips)    (k-ft)    (kips)
+=== ==  ===.=  ======.=  =====.==  ======.=  =====.==  ======.=  =====.==  ======.=  =====.==
+  1  0    0.0       0.0      0.00       0.0      0.00       0.0      0.00
+  1  1    0.6      -0.4     -1.01       0.0      0.00       0.0      0.00
+  1  2    1.2      -1.5     -2.01       0.0      0.00       0.0      0.00
+  1  3    1.8      -6.0    -58.06      -0.7    -13.71       0.0      0.00
+  1  4    2.4     -61.4   -109.40     -14.0    -26.36       0.0      0.00
+  1  5    3.0    -127.6   -110.92     -29.8    -26.36       0.0      0.00
+  1  6    3.6    -194.5   -111.92     -45.6    -26.36       0.0      0.00
+  1  7    4.2    -262.1   -112.93     -61.4    -26.36       0.0      0.00
+  1  8    4.8    -330.5   -114.44     -77.2    -26.36       0.0      0.00
+  1  9    5.4    -399.6   -115.45     -93.1    -26.36       0.0      0.00
+  1 10    6.0    -469.4   -116.96    -108.9    -26.36       0.0      0.00
+ 
+  2  0    6.0    -451.4    132.06    -103.0     28.87       0.0      0.00
+  2  1    7.8    -217.1    128.53     -51.0     28.87       0.0      0.00
+  2  2    9.6     -27.5     83.02      -8.7     18.31       0.0      0.00
+  2  3   11.4      50.7     37.50       7.3      7.76       0.0      0.00
+  2  4   13.2     114.5     33.98      21.3      7.76       0.0      0.00
+  2  5   15.0     171.8     29.95      35.2      7.76       0.0      0.00
+  2  6   16.8     194.6    -40.22      42.2     -9.00       0.0      0.00
+  2  7   18.6      89.5    -65.95      18.7    -14.58       0.0      0.00
+  2  8   20.4     -32.8    -69.48      -7.5    -14.58       0.0      0.00
+  2  9   22.2    -161.6    -73.01     -33.8    -14.58       0.0      0.00
+  2 10   24.0    -298.6   -165.93     -60.5    -36.93       0.0      0.00
+ 
+  3  0   24.0    -298.8     77.60     -60.5     14.72       0.0      0.00
+  3  1   25.8    -162.5     74.08     -34.0     14.72       0.0      0.00
+  3  2   27.6     -32.7     70.55      -7.5     14.72       0.0      0.00
+  3  3   29.4      90.7     67.02      19.0     14.72       0.0      0.00
+  3  4   31.2     196.0     63.50      42.6     14.72       0.0      0.00
+  3  5   33.0     171.5    -29.37      35.1     -7.61       0.0      0.00
+  3  6   34.8     115.2    -32.90      21.4     -7.61       0.0      0.00
+  3  7   36.6      52.4    -36.43       7.7     -7.61       0.0      0.00
+  3  8   38.4     -26.2    -60.92      -8.3    -12.88       0.0      0.00
+  3  9   40.2    -216.5   -127.34     -50.9    -28.69       0.0      0.00
+  3 10   42.0    -449.6   -131.37    -102.5    -28.69       0.0      0.00
+ 
+  4  0   42.0    -467.3    117.48    -108.4     26.49       0.0      0.00
+  4  1   42.6    -397.2    116.47     -92.5     26.49       0.0      0.00
+  4  2   43.2    -327.8    115.46     -76.6     26.49       0.0      0.00
+  4  3   43.8    -259.1    113.95     -60.7     26.49       0.0      0.00
+  4  4   44.4    -191.2    112.94     -44.8     26.49       0.0      0.00
+  4  5   45.0    -123.9    111.43     -28.9     26.49       0.0      0.00
+  4  6   45.6     -57.5    110.43     -13.0     26.49       0.0      0.00
+  4  7   46.2      -5.2    109.42      -0.5     26.49       0.0      0.00
+  4  8   46.8      -1.5      2.52       0.0      0.00       0.0      0.00
+  4  9   47.4      -0.4      1.51       0.0      0.00       0.0      0.00
+  4 10   48.0       0.0      0.00       0.0      0.00       0.0      0.00
+ 
+
+* =============================================================================================================================
+# [AR:LIVE LOADS (WORK)] 5302  <Working Live Load Combination Shear and Moment Envelopes>
+* ==================================================================================================================================
+*  Values are printed for 1/10 points ( TP = 0 thru 10 )
+*  Moments are interpolated between two nearest integration points (IP).
+*  Shear   values are for nearest integration point (IP).
+*  Live Load only; no Dead, Superimposed Dead or Prestress effects included.
+*  CN --> Combination Number
+                                       --- SHEARS AND ASSOCIATED MOMENTS ---
+                   ----- MOMENT -----   POSITIVE  ASSOC     NEGATIVE  ASSOC
+SPAN    DIST       POSITIVE  NEGATIVE   SHEAR     MOMENT    SHEAR     MOMENT
+ #  TP  (ft)   CN   (k-ft)    (k-ft)    (kips)    (k-ft)    (kips)    (k-ft)
+=== ==  ===.=  ==  ======.=  ======.=  =====.==  ======.=  =====.==  ======.=
+***** Combination: HL93 (1) -- unfactored **************************************
+  1  0    0.0   1       0.1      -0.1      0.07      -0.1     -0.07       0.1
+  1  1    0.6   1       0.1      -0.1      0.07      -0.1     -0.07       0.1
+  1  2    1.2   1       0.2      -0.7      0.52       0.2     -2.18      -0.7
+  1  3    1.8   1       0.7      -3.0      1.31       0.7     -5.50      -3.0
+  1  4    2.4   1       1.6      -6.9      1.83       1.6     -7.68      -6.9
+  1  5    3.0   1       2.9     -12.3      2.60       2.9    -10.91     -12.3
+  1  6    3.6   1       4.5     -18.9      2.60       4.5    -10.91     -18.9
+  1  7    4.2   1       6.1     -25.4      2.60       6.1    -10.91     -25.4
+  1  8    4.8   1       7.6     -32.0      2.60       7.6    -10.91     -32.0
+  1  9    5.4   1       9.2     -38.5      2.60       9.2    -10.91     -38.5
+  1 10    6.0   1      10.7     -45.0      2.60      10.7    -10.91     -45.0
+ 
+  2  0    6.0   1       4.1    -117.5     90.16    -117.5     -7.27       4.1
+  2  1    7.8   1      66.4     -18.5     90.16      44.8     -7.27      -8.9
+  2  2    9.6   1     178.2     -24.7     44.04     163.6     -7.27     -21.9
+  2  3   11.4   1     216.3     -36.8     25.62     115.1     -7.27     -35.0
+  2  4   13.2   1     239.2     -49.1     25.62     161.3     -7.27     -48.0
+  2  5   15.0   1     262.1     -61.9     25.62     207.4     -7.27     -61.0
+  2  6   16.8   1     251.5     -73.9      2.65      43.3    -34.73     229.4
+  2  7   18.6   1     159.7     -84.5      0.00       0.0    -63.69     119.0
+  2  8   20.4   1      60.6     -95.2      0.00       0.0    -63.69       4.4
+  2  9   22.2   1       0.0    -149.2      0.00       0.0    -63.69    -110.3
+  2 10   24.0   1       0.0    -258.6      0.00       0.0   -106.53    -236.9
+ 
+  3  0   24.0   1       0.0    -259.8     91.90    -246.8      0.00       0.0
+  3  1   25.8   1       0.0    -149.6     66.90     -80.1      0.00       0.0
+  3  2   27.6   1      60.3     -95.7     63.71      42.4      0.00       0.0
+  3  3   29.4   1     160.5     -85.2     63.71     157.1      0.00       0.0
+  3  4   31.2   1     252.0     -74.4     39.38     231.0      0.00      44.3
+  3  5   33.0   1     261.4     -61.9      7.25     -60.0    -25.42     201.3
+  3  6   34.8   1     238.9     -49.2      7.25     -46.9    -25.42     155.5
+  3  7   36.6   1     216.6     -36.7      7.25     -33.9    -25.42     109.8
+  3  8   38.4   1     178.2     -24.7      7.25     -20.8    -37.56     170.2
+  3  9   40.2   1      65.7     -17.3      7.25      -7.8    -89.44      50.7
+  3 10   42.0   1       5.3    -110.3      7.25       5.3    -89.44    -110.3
+ 
+  4  0   42.0   1      10.7     -34.5      8.43     -34.5     -2.63      10.7
+  4  1   42.6   1       9.2     -29.4      8.43     -29.4     -2.63       9.2
+  4  2   43.2   1       7.6     -24.4      8.43     -24.4     -2.63       7.6
+  4  3   43.8   1       6.0     -19.3      8.43     -19.3     -2.63       6.0
+  4  4   44.4   1       4.4     -14.3      8.43     -14.3     -2.63       4.4
+  4  5   45.0   1       2.9      -9.2      8.43      -9.2     -2.63       2.9
+  4  6   45.6   1       1.6      -5.1      6.75      -5.1     -2.10       1.6
+  4  7   46.2   1       0.7      -2.2      5.06      -2.2     -1.58       0.7
+  4  8   46.8   1       0.2      -0.5      2.29      -0.5     -0.71       0.2
+  4  9   47.4   1       0.0       0.0      0.61       0.0     -0.19       0.0
+  4 10   48.0   1       0.0       0.0      0.06       0.0      0.00       0.0
+ 
+***** Combination: AASHTO 1 (2) -- unfactored **********************************
+  1  0    0.0   2       0.0      -0.0      0.03      -0.0     -0.03       0.0
+  1  1    0.6   2       0.0      -0.0      0.03      -0.0     -0.03       0.0
+  1  2    1.2   2       0.1      -0.3      0.19       0.1     -0.79      -0.3
+  1  3    1.8   2       0.3      -1.1      0.47       0.3     -1.99      -1.1
+  1  4    2.4   2       0.6      -2.5      0.66       0.6     -2.78      -2.5
+  1  5    3.0   2       1.1      -4.5      0.94       1.1     -3.94      -4.5
+  1  6    3.6   2       1.6      -6.8      0.94       1.6     -3.94      -6.8
+  1  7    4.2   2       2.2      -9.2      0.94       2.2     -3.94      -9.2
+  1  8    4.8   2       2.8     -11.6      0.94       2.8     -3.94     -11.6
+  1  9    5.4   2       3.3     -13.9      0.94       3.3     -3.94     -13.9
+  1 10    6.0   2       3.9     -16.3      0.94       3.9     -3.94     -16.3
+ 
+  2  0    6.0   2       1.5     -42.5     32.60     -42.5     -2.63       1.5
+  2  1    7.8   2      24.0      -6.7     32.60      16.2     -2.63      -3.2
+  2  2    9.6   2      64.4      -8.9     15.92      59.1     -2.63      -7.9
+  2  3   11.4   2      78.2     -13.3      9.27      41.6     -2.63     -12.6
+  2  4   13.2   2      86.5     -17.8      9.27      58.3     -2.63     -17.4
+  2  5   15.0   2      94.8     -22.4      9.27      75.0     -2.63     -22.1
+  2  6   16.8   2      90.9     -26.7      0.96      15.7    -12.56      83.0
+  2  7   18.6   2      57.7     -30.6      0.00       0.0    -23.03      43.0
+  2  8   20.4   2      21.9     -34.4      0.00       0.0    -23.03       1.6
+  2  9   22.2   2       0.0     -53.9      0.00       0.0    -23.03     -39.9
+  2 10   24.0   2       0.0     -93.5      0.00       0.0    -38.52     -85.7
+ 
+  3  0   24.0   2       0.0     -93.9     33.23     -89.2      0.00       0.0
+  3  1   25.8   2       0.0     -54.1     24.19     -29.0      0.00       0.0
+  3  2   27.6   2      21.8     -34.6     23.04      15.3      0.00       0.0
+  3  3   29.4   2      58.0     -30.8     23.04      56.8      0.00       0.0
+  3  4   31.2   2      91.1     -26.9     14.24      83.5      0.00      16.0
+  3  5   33.0   2      94.5     -22.4      2.62     -21.7     -9.19      72.8
+  3  6   34.8   2      86.4     -17.8      2.62     -17.0     -9.19      56.2
+  3  7   36.6   2      78.3     -13.3      2.62     -12.3     -9.19      39.7
+  3  8   38.4   2      64.4      -8.9      2.62      -7.5    -13.58      61.5
+  3  9   40.2   2      23.8      -6.2      2.62      -2.8    -32.34      18.3
+  3 10   42.0   2       1.9     -39.9      2.62       1.9    -32.34     -39.9
+ 
+  4  0   42.0   2       3.9     -12.5      3.05     -12.5     -0.95       3.9
+  4  1   42.6   2       3.3     -10.6      3.05     -10.6     -0.95       3.3
+  4  2   43.2   2       2.7      -8.8      3.05      -8.8     -0.95       2.7
+  4  3   43.8   2       2.2      -7.0      3.05      -7.0     -0.95       2.2
+  4  4   44.4   2       1.6      -5.2      3.05      -5.2     -0.95       1.6
+  4  5   45.0   2       1.0      -3.3      3.05      -3.3     -0.95       1.0
+  4  6   45.6   2       0.6      -1.8      2.44      -1.8     -0.76       0.6
+  4  7   46.2   2       0.2      -0.8      1.83      -0.8     -0.57       0.2
+  4  8   46.8   2       0.1      -0.2      0.83      -0.2     -0.26       0.1
+  4  9   47.4   2       0.0       0.0      0.22       0.0     -0.07       0.0
+  4 10   48.0   2       0.0       0.0      0.02       0.0      0.00       0.0
+ 
+***** Combination: AASHTO 2 (3) -- unfactored **********************************
+  1  0    0.0   3       0.1      -0.1      0.03      -0.1     -0.03       0.1
+  1  1    0.6   3       0.0      -0.0      0.03      -0.0     -0.03       0.0
+  1  2    1.2   3       0.1      -0.3      0.25       0.1     -1.03      -0.3
+  1  3    1.8   3       0.3      -1.4      0.62       0.3     -2.60      -1.4
+  1  4    2.4   3       0.8      -3.3      0.87       0.8     -3.63      -3.3
+  1  5    3.0   3       1.4      -5.8      1.23       1.4     -5.16      -5.8
+  1  6    3.6   3       2.1      -8.9      1.23       2.1     -5.16      -8.9
+  1  7    4.2   3       2.9     -12.0      1.23       2.9     -5.16     -12.0
+  1  8    4.8   3       3.6     -15.1      1.23       3.6     -5.16     -15.1
+  1  9    5.4   3       4.3     -18.2      1.23       4.3     -5.16     -18.2
+  1 10    6.0   3       5.1     -21.3      1.23       5.1     -5.16     -21.3
+ 
+  2  0    6.0   3       1.9     -55.6     42.68     -55.6     -3.44       1.9
+  2  1    7.8   3      31.4      -8.8     42.68      21.2     -3.44      -4.2
+  2  2    9.6   3      84.4     -11.7     20.85      77.4     -3.44     -10.4
+  2  3   11.4   3     102.4     -17.4     12.13      54.5     -3.44     -16.6
+  2  4   13.2   3     113.2     -23.3     12.13      76.3     -3.44     -22.7
+  2  5   15.0   3     124.1     -29.3     12.13      98.2     -3.44     -28.9
+  2  6   16.8   3     119.1     -35.0      1.25      20.5    -16.44     108.6
+  2  7   18.6   3      75.6     -40.0      0.00       0.0    -30.15      56.3
+  2  8   20.4   3      28.7     -45.1      0.00       0.0    -30.15       2.1
+  2  9   22.2   3       0.0     -70.6      0.00       0.0    -30.15     -52.2
+  2 10   24.0   3       0.0    -122.4      0.00       0.0    -50.43    -112.1
+ 
+  3  0   24.0   3       0.0    -123.0     43.50    -116.8      0.00       0.0
+  3  1   25.8   3       0.0     -70.8     31.67     -37.9      0.00       0.0
+  3  2   27.6   3      28.5     -45.3     30.16      20.1      0.00       0.0
+  3  3   29.4   3      76.0     -40.3     30.16      74.4      0.00       0.0
+  3  4   31.2   3     119.3     -35.2     18.64     109.3      0.00      21.0
+  3  5   33.0   3     123.7     -29.3      3.43     -28.4    -12.03      95.3
+  3  6   34.8   3     113.1     -23.3      3.43     -22.2    -12.03      73.6
+  3  7   36.6   3     102.5     -17.4      3.43     -16.0    -12.03      52.0
+  3  8   38.4   3      84.3     -11.7      3.43      -9.9    -17.78      80.6
+  3  9   40.2   3      31.1      -8.2      3.43      -3.7    -42.34      24.0
+  3 10   42.0   3       2.5     -52.2      3.43       2.5    -42.34     -52.2
+ 
+  4  0   42.0   3       5.1     -16.3      3.99     -16.3     -1.24       5.1
+  4  1   42.6   3       4.3     -13.9      3.99     -13.9     -1.24       4.3
+  4  2   43.2   3       3.6     -11.5      3.99     -11.5     -1.24       3.6
+  4  3   43.8   3       2.8      -9.1      3.99      -9.1     -1.24       2.8
+  4  4   44.4   3       2.1      -6.7      3.99      -6.7     -1.24       2.1
+  4  5   45.0   3       1.4      -4.4      3.99      -4.4     -1.24       1.4
+  4  6   45.6   3       0.8      -2.4      3.19      -2.4     -0.99       0.8
+  4  7   46.2   3       0.3      -1.0      2.40      -1.0     -0.75       0.3
+  4  8   46.8   3       0.1      -0.2      1.09      -0.2     -0.34       0.1
+  4  9   47.4   3       0.0       0.0      0.29       0.0     -0.09       0.0
+  4 10   48.0   3       0.0       0.0      0.03       0.0      0.00       0.0
+ 
+***** Combination: AASHTO 3 (4) -- unfactored **********************************
+  1  0    0.0   4       0.1      -0.1      0.04      -0.1     -0.04       0.1
+  1  1    0.6   4       0.0      -0.0      0.04      -0.0     -0.04       0.0
+  1  2    1.2   4       0.1      -0.4      0.26       0.1     -1.10      -0.4
+  1  3    1.8   4       0.4      -1.5      0.66       0.4     -2.76      -1.5
+  1  4    2.4   4       0.8      -3.5      0.92       0.8     -3.86      -3.5
+  1  5    3.0   4       1.5      -6.2      1.31       1.5     -5.48      -6.2
+  1  6    3.6   4       2.3      -9.5      1.31       2.3     -5.48      -9.5
+  1  7    4.2   4       3.0     -12.8      1.31       3.0     -5.48     -12.8
+  1  8    4.8   4       3.8     -16.0      1.31       3.8     -5.48     -16.0
+  1  9    5.4   4       4.6     -19.3      1.31       4.6     -5.48     -19.3
+  1 10    6.0   4       5.4     -22.6      1.31       5.4     -5.48     -22.6
+ 
+  2  0    6.0   4       2.1     -59.0     45.28     -59.0     -3.65       2.1
+  2  1    7.8   4      33.3      -9.3     45.28      22.5     -3.65      -4.5
+  2  2    9.6   4      89.5     -12.4     22.11      82.1     -3.65     -11.0
+  2  3   11.4   4     108.6     -18.5     12.87      57.8     -3.65     -17.6
+  2  4   13.2   4     120.1     -24.7     12.87      81.0     -3.65     -24.1
+  2  5   15.0   4     131.6     -31.1     12.87     104.1     -3.65     -30.6
+  2  6   16.8   4     126.3     -37.1      1.33      21.7    -17.44     115.2
+  2  7   18.6   4      80.2     -42.4      0.00       0.0    -31.98      59.8
+  2  8   20.4   4      30.4     -47.8      0.00       0.0    -31.98       2.2
+  2  9   22.2   4       0.0     -74.9      0.00       0.0    -31.98     -55.4
+  2 10   24.0   4       0.0    -129.9      0.00       0.0    -53.50    -119.0
+ 
+  3  0   24.0   4       0.0    -130.5     46.15    -123.9      0.00       0.0
+  3  1   25.8   4       0.0     -75.1     33.60     -40.2      0.00       0.0
+  3  2   27.6   4      30.3     -48.1     31.99      21.3      0.00       0.0
+  3  3   29.4   4      80.6     -42.8     31.99      78.9      0.00       0.0
+  3  4   31.2   4     126.5     -37.3     19.77     116.0      0.00      22.2
+  3  5   33.0   4     131.3     -31.1      3.64     -30.1    -12.76     101.1
+  3  6   34.8   4     120.0     -24.7      3.64     -23.6    -12.76      78.1
+  3  7   36.6   4     108.8     -18.4      3.64     -17.0    -12.76      55.1
+  3  8   38.4   4      89.5     -12.4      3.64     -10.5    -18.86      85.5
+  3  9   40.2   4      33.0      -8.7      3.64      -3.9    -44.91      25.5
+  3 10   42.0   4       2.7     -55.4      3.64       2.7    -44.91     -55.4
+ 
+  4  0   42.0   4       5.4     -17.3      4.23     -17.3     -1.32       5.4
+  4  1   42.6   4       4.6     -14.8      4.23     -14.8     -1.32       4.6
+  4  2   43.2   4       3.8     -12.2      4.23     -12.2     -1.32       3.8
+  4  3   43.8   4       3.0      -9.7      4.23      -9.7     -1.32       3.0
+  4  4   44.4   4       2.2      -7.2      4.23      -7.2     -1.32       2.2
+  4  5   45.0   4       1.4      -4.6      4.23      -4.6     -1.32       1.4
+  4  6   45.6   4       0.8      -2.6      3.39      -2.6     -1.06       0.8
+  4  7   46.2   4       0.3      -1.1      2.54      -1.1     -0.79       0.3
+  4  8   46.8   4       0.1      -0.2      1.15      -0.2     -0.36       0.1
+  4  9   47.4   4       0.0       0.0      0.30       0.0     -0.09       0.0
+  4 10   48.0   4       0.0       0.0      0.03       0.0      0.00       0.0
+ 
+***** Combination: NRL (5) -- unfactored ***************************************
+  1  0    0.0   5       0.1      -0.1      0.04      -0.1     -0.04       0.1
+  1  1    0.6   5       0.1      -0.1      0.04      -0.1     -0.04       0.0
+  1  2    1.2   5       0.1      -0.4      0.30       0.1     -1.25      -0.4
+  1  3    1.8   5       0.4      -1.7      0.75       0.4     -3.16      -1.7
+  1  4    2.4   5       0.9      -4.0      1.05       0.9     -4.42      -4.0
+  1  5    3.0   5       1.7      -7.1      1.50       1.7     -6.27      -7.1
+  1  6    3.6   5       2.6     -10.9      1.50       2.6     -6.27     -10.9
+  1  7    4.2   5       3.5     -14.6      1.50       3.5     -6.27     -14.6
+  1  8    4.8   5       4.4     -18.4      1.50       4.4     -6.27     -18.4
+  1  9    5.4   5       5.3     -22.1      1.50       5.3     -6.27     -22.1
+  1 10    6.0   5       6.2     -25.9      1.50       6.2     -6.27     -25.9
+ 
+  2  0    6.0   5       2.4     -67.6     51.87     -67.6     -4.18       2.4
+  2  1    7.8   5      38.2     -10.7     51.87      25.8     -4.18      -5.1
+  2  2    9.6   5     102.5     -14.2     25.33      94.1     -4.18     -12.6
+  2  3   11.4   5     124.4     -21.2     14.74      66.2     -4.18     -20.1
+  2  4   13.2   5     137.6     -28.3     14.74      92.8     -4.18     -27.6
+  2  5   15.0   5     150.8     -35.6     14.74     119.3     -4.18     -35.1
+  2  6   16.8   5     144.7     -42.5      1.52      24.9    -19.98     132.0
+  2  7   18.6   5      91.9     -48.6      0.00       0.0    -36.64      68.5
+  2  8   20.4   5      34.9     -54.8      0.00       0.0    -36.64       2.5
+  2  9   22.2   5       0.0     -85.8      0.00       0.0    -36.64     -63.5
+  2 10   24.0   5       0.0    -148.8      0.00       0.0    -61.28    -136.3
+ 
+  3  0   24.0   5       0.0    -149.4     52.87    -142.0      0.00       0.0
+  3  1   25.8   5       0.0     -86.1     38.49     -46.1      0.00       0.0
+  3  2   27.6   5      34.7     -55.1     36.65      24.4      0.00       0.0
+  3  3   29.4   5      92.3     -49.0     36.65      90.4      0.00       0.0
+  3  4   31.2   5     144.9     -42.8     22.65     132.9      0.00      25.5
+  3  5   33.0   5     150.4     -35.6      4.17     -34.5    -14.62     115.8
+  3  6   34.8   5     137.4     -28.3      4.17     -27.0    -14.62      89.5
+  3  7   36.6   5     124.6     -21.1      4.17     -19.5    -14.62      63.1
+  3  8   38.4   5     102.5     -14.2      4.17     -12.0    -21.61      97.9
+  3  9   40.2   5      37.8      -9.9      4.17      -4.5    -51.45      29.2
+  3 10   42.0   5       3.0     -63.4      4.17       3.0    -51.45     -63.4
+ 
+  4  0   42.0   5       6.2     -19.8      4.85     -19.8     -1.51       6.2
+  4  1   42.6   5       5.3     -16.9      4.85     -16.9     -1.51       5.3
+  4  2   43.2   5       4.4     -14.0      4.85     -14.0     -1.51       4.4
+  4  3   43.8   5       3.5     -11.1      4.85     -11.1     -1.51       3.5
+  4  4   44.4   5       2.6      -8.2      4.85      -8.2     -1.51       2.6
+  4  5   45.0   5       1.6      -5.3      4.85      -5.3     -1.51       1.6
+  4  6   45.6   5       0.9      -2.9      3.88      -2.9     -1.21       0.9
+  4  7   46.2   5       0.4      -1.3      2.91      -1.3     -0.91       0.4
+  4  8   46.8   5       0.1      -0.3      1.32      -0.3     -0.41       0.1
+  4  9   47.4   5       0.0       0.0      0.35       0.0     -0.11       0.0
+  4 10   48.0   5       0.0       0.0      0.03       0.0      0.00       0.0
+ 
+***** Combination: OL 1 + Controlling Legal (6) -- unfactored ******************
+  1  0    0.0   6       0.1      -0.1      0.04      -0.1     -0.04       0.1
+  1  1    0.6   6       0.1      -0.1      0.04      -0.0     -0.04       0.0
+  1  2    1.2   6       0.1      -0.4      0.34       0.1     -1.26      -0.4
+  1  3    1.8   6       0.5      -1.7      0.85       0.5     -3.15      -1.7
+  1  4    2.4   6       1.1      -4.0      1.19       1.1     -4.40      -4.0
+  1  5    3.0   6       1.9      -7.1      1.69       1.9     -6.24      -7.1
+  1  6    3.6   6       2.9     -10.8      1.69       2.9     -6.24     -10.8
+  1  7    4.2   6       3.9     -14.5      1.69       3.9     -6.24     -14.5
+  1  8    4.8   6       4.9     -18.3      1.69       4.9     -6.24     -18.3
+  1  9    5.4   6       6.0     -22.0      1.69       6.0     -6.24     -22.0
+  1 10    6.0   6       7.0     -25.8      1.69       7.0     -6.24     -25.8
+ 
+  2  0    6.0   6       2.3     -74.8     51.83     -74.8     -4.07       2.3
+  2  1    7.8   6      37.2     -10.9     51.84      18.5     -4.07      -5.0
+  2  2    9.6   6      99.9     -13.8     26.46      87.8     -4.07     -12.3
+  2  3   11.4   6     121.2     -20.6     14.36      64.5     -4.07     -19.6
+  2  4   13.2   6     134.0     -27.5     14.36      90.4     -4.07     -26.9
+  2  5   15.0   6     148.1     -34.7     14.36     116.2     -4.07     -34.2
+  2  6   16.8   6     142.6     -41.4      1.48      24.3    -22.55     135.5
+  2  7   18.6   6      89.5     -47.4      0.00       0.0    -41.64      80.6
+  2  8   20.4   6      34.0     -53.3      0.00       0.0    -41.64       5.6
+  2  9   22.2   6       0.0     -94.6      0.00       0.0    -41.64     -69.4
+  2 10   24.0   6       0.0    -164.2      0.00       0.0    -67.67    -148.7
+ 
+  3  0   24.0   6       0.0    -164.9     58.28    -157.3      0.00       0.0
+  3  1   25.8   6       0.0     -94.9     43.47     -70.3      0.00       0.0
+  3  2   27.6   6      33.8     -53.6     41.55       4.5      0.00       0.0
+  3  3   29.4   6      89.9     -47.8     41.55      79.2      0.00       0.0
+  3  4   31.2   6     141.3     -41.7     25.51     133.8      0.00      24.8
+  3  5   33.0   6     146.5     -34.7      4.06     -33.6    -14.24     112.8
+  3  6   34.8   6     133.9     -27.5      4.06     -26.3    -14.24      87.1
+  3  7   36.6   6     121.4     -20.6      4.06     -19.0    -14.24      61.5
+  3  8   38.4   6      99.8     -13.8      4.06     -11.7    -22.29      90.5
+  3  9   40.2   6      36.8     -10.1      4.06      -4.4    -50.84      21.8
+  3 10   42.0   6       3.0     -69.7      4.06       3.0    -50.84     -69.7
+ 
+  4  0   42.0   6       7.0     -19.8      4.85     -19.8     -1.72       7.0
+  4  1   42.6   6       6.0     -16.9      4.85     -16.9     -1.72       6.0
+  4  2   43.2   6       5.0     -14.0      4.85     -14.0     -1.72       5.0
+  4  3   43.8   6       3.9     -11.1      4.85     -11.1     -1.72       3.9
+  4  4   44.4   6       2.9      -8.2      4.85      -8.2     -1.72       2.9
+  4  5   45.0   6       1.9      -5.3      4.85      -5.3     -1.72       1.9
+  4  6   45.6   6       1.0      -2.9      3.88      -2.9     -1.37       1.0
+  4  7   46.2   6       0.4      -1.3      2.91      -1.3     -1.03       0.4
+  4  8   46.8   6       0.1      -0.3      1.32      -0.3     -0.47       0.1
+  4  9   47.4   6       0.0       0.0      0.37       0.0     -0.12       0.0
+  4 10   48.0   6       0.0       0.0      0.03       0.0      0.00       0.0
+ 
+***** Combination: OL 2 + Controlling Legal (7) -- unfactored ******************
+  1  0    0.0   7       0.1      -0.1      0.08      -0.1     -0.07       0.1
+  1  1    0.6   7       0.1      -0.1      0.08      -0.1     -0.07       0.1
+  1  2    1.2   7       0.2      -0.8      0.59       0.2     -2.31      -0.8
+  1  3    1.8   7       0.8      -3.2      1.48       0.8     -5.79      -3.2
+  1  4    2.4   7       1.9      -7.3      2.07       1.9     -8.09      -7.3
+  1  5    3.0   7       3.3     -13.0      2.94       3.3    -11.50     -13.0
+  1  6    3.6   7       5.1     -19.9      2.94       5.1    -11.50     -19.9
+  1  7    4.2   7       6.8     -26.8      2.94       6.8    -11.50     -26.8
+  1  8    4.8   7       8.6     -33.7      2.94       8.6    -11.50     -33.7
+  1  9    5.4   7      10.4     -40.6      2.94      10.4    -11.50     -40.6
+  1 10    6.0   7      12.1     -47.5      2.94      12.1    -11.50     -47.5
+ 
+  2  0    6.0   7       4.3    -131.4     95.24    -131.4     -7.58       4.3
+  2  1    7.8   7      69.2     -19.0     95.25      40.1     -7.58      -9.3
+  2  2    9.6   7     185.7     -25.7     47.67     166.6     -7.58     -22.9
+  2  3   11.4   7     225.4     -38.4     26.70     120.0     -7.58     -36.4
+  2  4   13.2   7     249.2     -51.2     26.70     168.0     -7.58     -50.0
+  2  5   15.0   7     273.1     -64.4     26.70     216.1     -7.58     -63.6
+  2  6   16.8   7     262.0     -77.0      2.76      45.1    -38.58     251.5
+  2  7   18.6   7     166.4     -88.1      0.00       0.0    -71.39     152.6
+  2  8   20.4   7      63.2     -99.2      0.00       0.0    -71.39      24.1
+  2  9   22.2   7       0.0    -146.8      0.00       0.0    -71.39    -104.5
+  2 10   24.0   7       0.0    -256.0      0.00       0.0   -109.81    -214.5
+ 
+  3  0   24.0   7       0.0    -257.1     94.00    -227.9      0.00       0.0
+  3  1   25.8   7       0.0    -147.2     74.07    -105.3      0.00       0.0
+  3  2   27.6   7      62.8     -99.7     71.91      23.8      0.00       0.0
+  3  3   29.4   7     167.2     -88.8     71.91     153.2      0.00       0.0
+  3  4   31.2   7     262.5     -77.5     44.20     253.0      0.00      46.1
+  3  5   33.0   7     272.3     -64.5      7.56     -62.5    -26.48     209.7
+  3  6   34.8   7     248.9     -51.2      7.56     -48.9    -26.48     162.0
+  3  7   36.6   7     225.7     -38.3      7.56     -35.3    -26.48     114.4
+  3  8   38.4   7     185.6     -25.7      7.56     -21.7    -40.37     172.4
+  3  9   40.2   7      68.4     -17.6      7.56      -8.1    -93.90      46.2
+  3 10   42.0   7       5.5    -122.8      7.56       5.5    -93.90    -122.8
+ 
+  4  0   42.0   7      12.0     -36.4      8.91     -36.4     -2.94      12.0
+  4  1   42.6   7      10.3     -31.1      8.91     -31.1     -2.94      10.3
+  4  2   43.2   7       8.5     -25.7      8.91     -25.7     -2.94       8.5
+  4  3   43.8   7       6.7     -20.4      8.91     -20.4     -2.94       6.7
+  4  4   44.4   7       5.0     -15.1      8.91     -15.1     -2.94       5.0
+  4  5   45.0   7       3.2      -9.7      8.91      -9.7     -2.94       3.2
+  4  6   45.6   7       1.8      -5.4      7.13      -5.4     -2.35       1.8
+  4  7   46.2   7       0.8      -2.3      5.35      -2.3     -1.77       0.8
+  4  8   46.8   7       0.2      -0.5      2.42      -0.5     -0.80       0.2
+  4  9   47.4   7       0.0       0.0      0.66       0.0     -0.21       0.0
+  4 10   48.0   7       0.0       0.0      0.06       0.0      0.00       0.0
+ 
+***** Combination: EV2 + Controlling Legal (8) -- unfactored *******************
+  1  0    0.0   8       0.1      -0.1      0.04      -0.1     -0.04       0.1
+  1  1    0.6   8       0.1      -0.1      0.04      -0.0     -0.04       0.0
+  1  2    1.2   8       0.1      -0.4      0.30       0.1     -1.25      -0.4
+  1  3    1.8   8       0.4      -1.7      0.75       0.4     -3.16      -1.7
+  1  4    2.4   8       0.9      -4.0      1.05       0.9     -4.42      -4.0
+  1  5    3.0   8       1.7      -7.1      1.50       1.7     -6.27      -7.1
+  1  6    3.6   8       2.6     -10.9      1.50       2.6     -6.27     -10.9
+  1  7    4.2   8       3.5     -14.6      1.50       3.5     -6.27     -14.6
+  1  8    4.8   8       4.4     -18.4      1.50       4.4     -6.27     -18.4
+  1  9    5.4   8       5.3     -22.1      1.50       5.3     -6.27     -22.1
+  1 10    6.0   8       6.2     -25.9      1.50       6.2     -6.27     -25.9
+ 
+  2  0    6.0   8       2.4     -67.6     51.87     -67.6     -4.18       2.4
+  2  1    7.8   8      38.2     -10.2     51.87      25.8     -4.18      -5.1
+  2  2    9.6   8     102.5     -14.2     25.33      94.1     -4.18     -12.6
+  2  3   11.4   8     124.4     -21.2     14.74      66.2     -4.18     -20.1
+  2  4   13.2   8     137.6     -28.3     14.74      92.8     -4.18     -27.6
+  2  5   15.0   8     150.8     -35.6     14.74     119.3     -4.18     -35.1
+  2  6   16.8   8     144.7     -42.5      1.52      24.9    -19.75     133.8
+  2  7   18.6   8      91.9     -48.6      0.00       0.0    -36.38      89.0
+  2  8   20.4   8      34.9     -54.8      0.00       0.0    -36.38      23.5
+  2  9   22.2   8       0.0     -76.4      0.00       0.0    -36.38     -44.4
+  2 10   24.0   8       0.0    -132.8      0.00       0.0    -55.06     -84.1
+ 
+  3  0   24.0   8       0.0    -133.4     47.34    -124.6      0.00       0.0
+  3  1   25.8   8       0.0     -76.6     37.59     -44.2      0.00       0.0
+  3  2   27.6   8      34.7     -55.1     36.65      24.4      0.00       0.0
+  3  3   29.4   8      92.3     -49.0     36.65      90.4      0.00       0.0
+  3  4   31.2   8     144.9     -42.8     22.65     134.7      0.00      25.5
+  3  5   33.0   8     150.4     -35.6      4.17     -34.5    -14.62     115.8
+  3  6   34.8   8     137.4     -28.3      4.17     -27.0    -14.62      89.5
+  3  7   36.6   8     124.6     -21.1      4.17     -19.5    -14.62      63.1
+  3  8   38.4   8     102.5     -14.2      4.17     -12.0    -21.61      97.9
+  3  9   40.2   8      37.8      -9.5      4.17      -4.5    -51.45      29.2
+  3 10   42.0   8       3.0     -63.4      4.17       3.0    -51.45     -63.4
+ 
+  4  0   42.0   8       6.0     -19.8      4.85     -19.8     -1.47       6.0
+  4  1   42.6   8       5.1     -16.9      4.85     -16.9     -1.47       5.1
+  4  2   43.2   8       4.3     -14.0      4.85     -14.0     -1.47       4.3
+  4  3   43.8   8       3.4     -11.1      4.85     -11.1     -1.47       3.4
+  4  4   44.4   8       2.5      -8.2      4.85      -8.2     -1.47       2.5
+  4  5   45.0   8       1.6      -5.3      4.85      -5.3     -1.47       1.6
+  4  6   45.6   8       0.9      -2.9      3.88      -2.9     -1.18       0.9
+  4  7   46.2   8       0.4      -1.3      2.91      -1.3     -0.88       0.4
+  4  8   46.8   8       0.1      -0.3      1.32      -0.3     -0.40       0.1
+  4  9   47.4   8       0.0       0.0      0.35       0.0     -0.11       0.0
+  4 10   48.0   8       0.0       0.0      0.03       0.0      0.00       0.0
+ 
+***** Combination: EV3 + Controlling Legal (9) -- unfactored *******************
+  1  0    0.0   9       0.1      -0.1      0.05      -0.1     -0.04       0.1
+  1  1    0.6   9       0.1      -0.1      0.05      -0.1     -0.04       0.0
+  1  2    1.2   9       0.1      -0.5      0.33       0.1     -1.37      -0.5
+  1  3    1.8   9       0.5      -1.9      0.82       0.5     -3.44      -1.9
+  1  4    2.4   9       1.0      -4.3      1.15       1.0     -4.81      -4.3
+  1  5    3.0   9       1.8      -7.7      1.63       1.8     -6.83      -7.7
+  1  6    3.6   9       2.8     -11.8      1.63       2.8     -6.83     -11.8
+  1  7    4.2   9       3.8     -15.9      1.63       3.8     -6.83     -15.9
+  1  8    4.8   9       4.8     -20.0      1.63       4.8     -6.83     -20.0
+  1  9    5.4   9       5.7     -24.1      1.63       5.7     -6.83     -24.1
+  1 10    6.0   9       6.7     -28.2      1.63       6.7     -6.83     -28.2
+ 
+  2  0    6.0   9       2.6     -73.6     56.45     -73.6     -4.55       2.6
+  2  1    7.8   9      41.6     -11.5     56.45      28.1     -4.55      -5.6
+  2  2    9.6   9     111.6     -15.5     27.57     102.4     -4.55     -13.7
+  2  3   11.4   9     135.4     -23.1     16.04      72.1     -4.55     -21.9
+  2  4   13.2   9     149.8     -30.8     16.04     101.0     -4.55     -30.1
+  2  5   15.0   9     164.1     -38.7     16.04     129.9     -4.55     -38.2
+  2  6   16.8   9     157.5     -46.3      1.66      27.1    -21.67     144.2
+  2  7   18.6   9     100.0     -52.9      0.00       0.0    -39.60      96.9
+  2  8   20.4   9      38.0     -59.6      0.00       0.0    -39.60      25.6
+  2  9   22.2   9       0.0     -90.4      0.00       0.0    -39.60     -49.8
+  2 10   24.0   9       0.0    -156.9      0.00       0.0    -64.60    -144.2
+ 
+  3  0   24.0   9       0.0    -157.6     55.70    -150.0      0.00       0.0
+  3  1   25.8   9       0.0     -90.7     41.60     -49.6      0.00       0.0
+  3  2   27.6   9      37.7     -59.9     39.89      26.6      0.00       0.0
+  3  3   29.4   9     100.5     -53.4     39.89      98.4      0.00       0.0
+  3  4   31.2   9     157.8     -46.6     24.65     145.2      0.00      27.7
+  3  5   33.0   9     163.7     -38.8      4.54     -37.6    -15.91     126.0
+  3  6   34.8   9     149.6     -30.8      4.54     -29.4    -15.91      97.4
+  3  7   36.6   9     135.6     -23.0      4.54     -21.2    -15.91      68.7
+  3  8   38.4   9     111.6     -15.5      4.54     -13.0    -23.52     106.6
+  3  9   40.2   9      41.1     -10.7      4.54      -4.9    -56.00      31.8
+  3 10   42.0   9       3.3     -69.0      4.54       3.3    -56.00     -69.0
+ 
+  4  0   42.0   9       6.6     -21.6      5.28     -21.6     -1.62       6.6
+  4  1   42.6   9       5.7     -18.4      5.28     -18.4     -1.62       5.7
+  4  2   43.2   9       4.7     -15.3      5.28     -15.3     -1.62       4.7
+  4  3   43.8   9       3.7     -12.1      5.28     -12.1     -1.62       3.7
+  4  4   44.4   9       2.7      -8.9      5.28      -8.9     -1.62       2.7
+  4  5   45.0   9       1.8      -5.8      5.28      -5.8     -1.62       1.8
+  4  6   45.6   9       1.0      -3.2      4.22      -3.2     -1.30       1.0
+  4  7   46.2   9       0.4      -1.4      3.17      -1.4     -0.97       0.4
+  4  8   46.8   9       0.1      -0.3      1.44      -0.3     -0.44       0.1
+  4  9   47.4   9       0.0       0.0      0.38       0.0     -0.12       0.0
+  4 10   48.0   9       0.0       0.0      0.04       0.0      0.00       0.0
+ 
+
+* =============================================================================================================================
+# [AR:UNFACTORED REACT]  5600  <Unfactored Reactions>
+* ==================================================================================================================================
+*
+* TYPE KEYWORDS - DEAD = Dead Load Reactions
+*                 SDL  = Superimposed Dead Load Reactions
+*                 PS   = Prestress Reactions
+*                 UNL  = Uniform Load of (1) KIP per FOOT across bridge
+*                 Txxx = Truck Load Reactions, where "xxx" is the truck number.
+*                 CBxx = Combination Reactions, where xx is the load combination number.
+*                        Combinations include impact as specified in CARD 1050.
+*
+SUPPORT           MAXIMUM     MINIMUM
+LOCATION          REACTION    REACTION
+  (Ft)     TYPE   (K)         (K)          TRUCK NAME
+====.==    ====  =====.===   =====.===     ========================================================================================
+   6.00    DEAD    249.016
+   6.00    SDLC     55.231
+   6.00    SDLW      0.000
+   6.00    UNL      14.552
+   6.00    PS        0.000
+   6.00    CB01     75.993      -5.522     HL93
+   6.00    CB02     33.222      -2.414     AASHTO 1
+   6.00    CB03     43.493      -3.160     AASHTO 2
+   6.00    CB04     46.139      -3.353     AASHTO 3
+   6.00    CB05     52.856      -3.841     NRL
+   6.00    CB06     52.706      -3.741     OL 1 + Controlling Legal
+   6.00    CB07     96.947      -6.956     OL 2 + Controlling Legal
+   6.00    CB08     52.856      -3.841     EV2 + Controlling Legal
+   6.00    CB09     57.530      -4.181     EV3 + Controlling Legal
+ 
+  24.00    DEAD    243.538
+  24.00    SDLC     51.653
+  24.00    SDLW      0.000
+  24.00    UNL      18.897
+  24.00    PS        0.000
+  24.00    CB01    142.779       0.000     HL93
+  24.00    CB02     62.419       0.000     AASHTO 1
+  24.00    CB03     81.716       0.000     AASHTO 2
+  24.00    CB04     86.689       0.000     AASHTO 3
+  24.00    CB05     99.308       0.000     NRL
+  24.00    CB06    107.991       0.000     OL 1 + Controlling Legal
+  24.00    CB07    165.285       0.000     OL 2 + Controlling Legal
+  24.00    CB08     86.467       0.000     EV2 + Controlling Legal
+  24.00    CB09    103.796       0.000     EV3 + Controlling Legal
+ 
+  42.00    DEAD    248.845
+  42.00    SDLC     55.188
+  42.00    SDLW      0.000
+  42.00    UNL      14.552
+  42.00    PS        0.000
+  42.00    CB01     73.589      -5.597     HL93
+  42.00    CB02     32.171      -2.447     AASHTO 1
+  42.00    CB03     42.117      -3.203     AASHTO 2
+  42.00    CB04     44.680      -3.398     AASHTO 3
+  42.00    CB05     51.184      -3.893     NRL
+  42.00    CB06     50.519      -3.792     OL 1 + Controlling Legal
+  42.00    CB07     93.361      -7.050     OL 2 + Controlling Legal
+  42.00    CB08     51.184      -3.893     EV2 + Controlling Legal
+  42.00    CB09     55.709      -4.237     EV3 + Controlling Legal
+ 
+
+* =============================================================================================================================
+# [AR:SPAN DL DISP]      5602  <Span static load vertical elastic displacements>
+* ==================================================================================================================================
+*  Values are for nearest integration point to actual tenth point.
+*
+                                                  DL+SDL
+          X                              DL+SDL   +PS
+SPAN      COOR.    DL     SDL    PS      +PS      +CREEP
+ #    TP  (ft)     (in)   (in)   (in)    (in)     (in)
+===   ==  ====.==  ==.==  ==.==  ==.==   ==.==    ==.==
+  1    0     0.00  -0.03  -0.01   0.00   -0.03    -0.06
+  1    1     0.60  -0.02  -0.01   0.00   -0.03    -0.06
+  1    2     1.20  -0.02  -0.01   0.00   -0.03    -0.06
+  1    3     1.80  -0.02  -0.01   0.00   -0.03    -0.05
+  1    4     2.40  -0.02  -0.00   0.00   -0.03    -0.05
+  1    5     3.00  -0.02  -0.00   0.00   -0.02    -0.05
+  1    6     3.60  -0.02  -0.00   0.00   -0.02    -0.04
+  1    7     4.20  -0.02  -0.00   0.00   -0.02    -0.04
+  1    8     4.80  -0.02  -0.00   0.00   -0.02    -0.04
+  1    9     5.40  -0.02  -0.00   0.00   -0.02    -0.04
+  1   10     6.00  -0.01  -0.00   0.00   -0.02    -0.04
+ 
+  2    0     6.00  -0.01  -0.00   0.00   -0.02    -0.04
+  2    1     7.80  -0.01  -0.00   0.00   -0.02    -0.04
+  2    2     9.60  -0.02  -0.00   0.00   -0.02    -0.04
+  2    3    11.40  -0.02  -0.00   0.00   -0.02    -0.04
+  2    4    13.20  -0.02  -0.00   0.00   -0.02    -0.05
+  2    5    15.00  -0.02  -0.00   0.00   -0.02    -0.05
+  2    6    16.80  -0.02  -0.00   0.00   -0.02    -0.05
+  2    7    18.60  -0.02  -0.00   0.00   -0.02    -0.05
+  2    8    20.40  -0.02  -0.00   0.00   -0.02    -0.04
+  2    9    22.20  -0.02  -0.00   0.00   -0.02    -0.04
+  2   10    24.00  -0.01  -0.00   0.00   -0.02    -0.03
+ 
+  3    0    24.00  -0.01  -0.00   0.00   -0.02    -0.03
+  3    1    25.80  -0.01  -0.00   0.00   -0.02    -0.04
+  3    2    27.60  -0.02  -0.00   0.00   -0.02    -0.04
+  3    3    29.40  -0.02  -0.00   0.00   -0.02    -0.04
+  3    4    31.20  -0.02  -0.00   0.00   -0.02    -0.05
+  3    5    33.00  -0.02  -0.00   0.00   -0.02    -0.05
+  3    6    34.80  -0.02  -0.00   0.00   -0.02    -0.05
+  3    7    36.60  -0.02  -0.00   0.00   -0.02    -0.04
+  3    8    38.40  -0.02  -0.00   0.00   -0.02    -0.04
+  3    9    40.20  -0.01  -0.00   0.00   -0.02    -0.04
+  3   10    42.00  -0.01  -0.00   0.00   -0.02    -0.04
+ 
+  4    0    42.00  -0.01  -0.00   0.00   -0.02    -0.04
+  4    1    42.60  -0.01  -0.00   0.00   -0.02    -0.04
+  4    2    43.20  -0.02  -0.00   0.00   -0.02    -0.04
+  4    3    43.80  -0.02  -0.00   0.00   -0.02    -0.04
+  4    4    44.40  -0.02  -0.00   0.00   -0.02    -0.04
+  4    5    45.00  -0.02  -0.00   0.00   -0.02    -0.05
+  4    6    45.60  -0.02  -0.00   0.00   -0.02    -0.05
+  4    7    46.20  -0.02  -0.00   0.00   -0.03    -0.05
+  4    8    46.80  -0.02  -0.01   0.00   -0.03    -0.06
+  4    9    47.40  -0.02  -0.01   0.00   -0.03    -0.06
+  4   10    48.00  -0.03  -0.01   0.00   -0.03    -0.06
+ 
+
+* =============================================================================================================================
+# [AR:SPAN LL DISP]      5603  <Span live load vertical elastic displacements>
+* ==================================================================================================================================
+* NOTES: See 5602 output for tenth point coordinates.
+*        LC = Load Combination
+*        Deflections factored with: Impact, Lane load reduction, and Lane multiplier.
+*        Values are for nearest integration point to actual tenth point.
+*
+*
+SPAN      MIN   -----------  Tenth point deflections ( Inches ) ----------------
+ #    LC  MAX    0     1     2     3     4     5     6     7     8     9    10
+===   ==  ===  ==.== ==.== ==.== ==.== ==.== ==.== ==.== ==.== ==.== ==.== ==.==
+***** Combination: HL93 (1) ****************************************************
+  1    1  MAX   0.01  0.01  0.01  0.01  0.01  0.00  0.00  0.00  0.00  0.00  0.00
+  1    1  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.01
+ 
+  2    1  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2    1  MIN  -0.01 -0.01 -0.01 -0.02 -0.02 -0.02 -0.02 -0.02 -0.01 -0.01 -0.01
+ 
+  3    1  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3    1  MIN  -0.01 -0.01 -0.01 -0.02 -0.02 -0.02 -0.02 -0.02 -0.01 -0.01 -0.01
+ 
+  4    1  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.01  0.01  0.01  0.01
+  4    1  MIN  -0.01 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+ 
+***** Combination: AASHTO 1 (2) ************************************************
+  1    2  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1    2  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+  2    2  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2    2  MIN  -0.00 -0.00 -0.00 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.00 -0.00
+ 
+  3    2  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3    2  MIN  -0.00 -0.00 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.00 -0.00
+ 
+  4    2  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  4    2  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+ 
+***** Combination: AASHTO 2 (3) ************************************************
+  1    3  MAX   0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1    3  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+  2    3  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2    3  MIN  -0.00 -0.00 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01
+ 
+  3    3  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3    3  MIN  -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.00 -0.00
+ 
+  4    3  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  4    3  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+ 
+***** Combination: AASHTO 3 (4) ************************************************
+  1    4  MAX   0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1    4  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+  2    4  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2    4  MIN  -0.00 -0.00 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01
+ 
+  3    4  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3    4  MIN  -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.00
+ 
+  4    4  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.01
+  4    4  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+ 
+***** Combination: NRL (5) *****************************************************
+  1    5  MAX   0.01  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1    5  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+  2    5  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2    5  MIN  -0.00 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01
+ 
+  3    5  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3    5  MIN  -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.00
+ 
+  4    5  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.01  0.01
+  4    5  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+ 
+***** Combination: OL 1 + Controlling Legal (6) ********************************
+  1    6  MAX   0.01  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1    6  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+  2    6  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2    6  MIN  -0.00 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01
+ 
+  3    6  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3    6  MIN  -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.00
+ 
+  4    6  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.01
+  4    6  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+ 
+***** Combination: OL 2 + Controlling Legal (7) ********************************
+  1    7  MAX   0.01  0.01  0.01  0.01  0.01  0.00  0.00  0.00  0.00  0.00  0.00
+  1    7  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.01
+ 
+  2    7  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2    7  MIN  -0.01 -0.01 -0.01 -0.02 -0.02 -0.02 -0.02 -0.02 -0.02 -0.01 -0.01
+ 
+  3    7  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3    7  MIN  -0.01 -0.01 -0.01 -0.02 -0.02 -0.02 -0.02 -0.02 -0.02 -0.01 -0.01
+ 
+  4    7  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.01  0.01  0.01  0.01
+  4    7  MIN  -0.01 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+ 
+***** Combination: EV2 + Controlling Legal (8) *********************************
+  1    8  MAX   0.01  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1    8  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+  2    8  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2    8  MIN  -0.00 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01
+ 
+  3    8  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3    8  MIN  -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.00
+ 
+  4    8  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.01  0.01
+  4    8  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+ 
+***** Combination: EV3 + Controlling Legal (9) *********************************
+  1    9  MAX   0.01  0.01  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1    9  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+  2    9  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2    9  MIN  -0.00 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01
+ 
+  3    9  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3    9  MIN  -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.00
+ 
+  4    9  MAX   0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.01  0.01
+  4    9  MIN  -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+ 
+ 
+
+* =============================================================================================================================
+# [AR:LOAD RATINGS-LRFR] 5700B <Load Rating Factors per AASHTO Criteria>
+* ==================================================================================================================================
+* NOTES:
+* 1) Controlling Ratings are computed as follows:
+*      SHEAR   The value of vertical shear rating.
+*      MOMENT  1) Conventionally reinforced bridges are controlled by the Ultimate rating.
+*              2) Prestress bridges are controlled by either the LESSER of the SERVICE LOAD rating or ULTIMATE rating.
+*
+* 2) THE FOLLOWING SYMBOLS MEAN:
+*       N/A -- No value computed
+*       INF -- Value is a large positive number out of range for this printout
+*       NEG -- Value is a large negative number out of range for this printout
+*
+* 3) Values are for nearest integration point to actual tenth point.
+*
+
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+ 
+***** Combination: HL93 (1) -- OPERATING rating ********************************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 1       4.5   1   WORST CASE OPERATING SHEAR RATING =       INF
+* 1       0.0   1   WORST CASE OPERATING MOMENT RATING =      9.17
+* 1       0.0   1   WORST CASE OPERATING SVC MOMENT RATING =  N/C
+  1  0    0.0   1    INF           9.17       N/C
+  1  1    0.6   1    INF           INF        N/C
+  1  2    1.2   1    INF           INF        N/C
+  1  3    1.8   1    INF           INF        N/C
+  1  4    2.4   1    INF           INF        N/C
+  1  5    3.0   1    INF           INF        N/C
+  1  6    3.6   1    INF          66.18       N/C
+  1  7    4.2   1    INF          47.88       N/C
+  1  8    4.8   1    N/C           N/C        N/C
+  1  9    5.4   1    N/C           N/C        N/C
+  1 10    6.0   1    N/C           N/C        N/C
+ 
+***** Combination: HL93 (1) -- INVENTORY rating ********************************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 1       4.5   1   WORST CASE INVENTORY SHEAR RATING =       INF
+* 1       0.0   1   WORST CASE INVENTORY MOMENT RATING =      7.07
+* 1       0.0   1   WORST CASE INVENTORY SVC MOMENT RATING =  N/C
+  1  0    0.0   1    INF           7.07       N/C
+  1  1    0.6   1    INF           INF        N/C
+  1  2    1.2   1    INF           INF        N/C
+  1  3    1.8   1    INF           INF        N/C
+  1  4    2.4   1    INF           INF        N/C
+  1  5    3.0   1    INF          77.63       N/C
+  1  6    3.6   1    INF          51.05       N/C
+  1  7    4.2   1    INF          36.93       N/C
+  1  8    4.8   1    N/C           N/C        N/C
+  1  9    5.4   1    N/C           N/C        N/C
+  1 10    6.0   1    N/C           N/C        N/C
+ 
+ 
+***** Combination: HL93 (1) -- OPERATING rating ********************************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 2      13.5   1   WORST CASE OPERATING SHEAR RATING =       3.97
+* 2      10.0   1   WORST CASE OPERATING MOMENT RATING =      2.29
+* 2       0.0   1   WORST CASE OPERATING SVC MOMENT RATING =  N/C
+  2  0    6.0   1    N/C           N/C        N/C
+  2  1    7.8   1   28.20         17.62       N/C
+  2  2    9.6   1   27.39          5.07       N/C
+  2  3   11.4   1   14.28          3.71       N/C
+  2  4   13.2   1   13.73          3.06       N/C
+  2  5   15.0   1   13.01          2.48       N/C
+  2  6   16.8   1    8.77          2.47       N/C
+  2  7   18.6   1    4.01          4.44       N/C
+  2  8   20.4   1    4.62         12.70       N/C
+  2  9   22.2   1    4.62          8.88       N/C
+  2 10   24.0   1    N/C           N/C        N/C
+ 
+***** Combination: HL93 (1) -- INVENTORY rating ********************************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 2      13.5   1   WORST CASE INVENTORY SHEAR RATING =       3.06
+* 2      10.0   1   WORST CASE INVENTORY MOMENT RATING =      1.77
+* 2       0.0   1   WORST CASE INVENTORY SVC MOMENT RATING =  N/C
+  2  0    6.0   1    N/C           N/C        N/C
+  2  1    7.8   1   21.75         13.59       N/C
+  2  2    9.6   1   21.13          3.91       N/C
+  2  3   11.4   1   11.01          2.86       N/C
+  2  4   13.2   1   10.59          2.36       N/C
+  2  5   15.0   1   10.03          1.92       N/C
+  2  6   16.8   1    6.77          1.90       N/C
+  2  7   18.6   1    3.10          3.42       N/C
+  2  8   20.4   1    3.56          9.80       N/C
+  2  9   22.2   1    3.56          6.85       N/C
+  2 10   24.0   1    N/C           N/C        N/C
+ 
+ 
+***** Combination: HL93 (1) -- OPERATING rating ********************************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 3       3.5   1   WORST CASE OPERATING SHEAR RATING =       3.95
+* 3       8.0   1   WORST CASE OPERATING MOMENT RATING =      2.30
+* 3       0.0   1   WORST CASE OPERATING SVC MOMENT RATING =  N/C
+  3  0   24.0   1    N/C           N/C        N/C
+  3  1   25.8   1    4.60          7.87       N/C
+  3  2   27.6   1    3.95         13.92       N/C
+  3  3   29.4   1    3.98          4.97       N/C
+  3  4   31.2   1    6.63          2.51       N/C
+  3  5   33.0   1   13.21          2.49       N/C
+  3  6   34.8   1   13.84          2.98       N/C
+  3  7   36.6   1   14.51          3.59       N/C
+  3  8   38.4   1   13.26          4.68       N/C
+  3  9   40.2   1   27.83         12.96       N/C
+  3 10   42.0   1    N/C           N/C        N/C
+ 
+***** Combination: HL93 (1) -- INVENTORY rating ********************************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 3       3.5   1   WORST CASE INVENTORY SHEAR RATING =       3.05
+* 3       8.0   1   WORST CASE INVENTORY MOMENT RATING =      1.77
+* 3       0.0   1   WORST CASE INVENTORY SVC MOMENT RATING =  N/C
+  3  0   24.0   1    N/C           N/C        N/C
+  3  1   25.8   1    3.55          6.07       N/C
+  3  2   27.6   1    3.05         10.74       N/C
+  3  3   29.4   1    3.07          3.83       N/C
+  3  4   31.2   1    5.11          1.94       N/C
+  3  5   33.0   1   10.19          1.92       N/C
+  3  6   34.8   1   10.67          2.30       N/C
+  3  7   36.6   1   11.19          2.77       N/C
+  3  8   38.4   1   10.23          3.61       N/C
+  3  9   40.2   1   21.47         10.00       N/C
+  3 10   42.0   1    N/C           N/C        N/C
+ 
+ 
+***** Combination: HL93 (1) -- OPERATING rating ********************************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 4       1.5   1   WORST CASE OPERATING SHEAR RATING =       INF
+* 4       1.5   1   WORST CASE OPERATING MOMENT RATING =     48.11
+* 4       0.0   1   WORST CASE OPERATING SVC MOMENT RATING =  N/C
+  4  0   42.0   1    N/C           N/C        N/C
+  4  1   42.6   1    N/C           N/C        N/C
+  4  2   43.2   1    N/C           N/C        N/C
+  4  3   43.8   1    INF          54.91       N/C
+  4  4   44.4   1    INF          74.00       N/C
+  4  5   45.0   1    INF           INF        N/C
+  4  6   45.6   1    INF           INF        N/C
+  4  7   46.2   1    INF           INF        N/C
+  4  8   46.8   1    INF           INF        N/C
+  4  9   47.4   1    INF           INF        N/C
+  4 10   48.0   1    INF           INF        N/C
+ 
+***** Combination: HL93 (1) -- INVENTORY rating ********************************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 4       1.5   1   WORST CASE INVENTORY SHEAR RATING =       INF
+* 4       1.5   1   WORST CASE INVENTORY MOMENT RATING =     37.12
+* 4       0.0   1   WORST CASE INVENTORY SVC MOMENT RATING =  N/C
+  4  0   42.0   1    N/C           N/C        N/C
+  4  1   42.6   1    N/C           N/C        N/C
+  4  2   43.2   1    N/C           N/C        N/C
+  4  3   43.8   1    INF          42.36       N/C
+  4  4   44.4   1    INF          57.09       N/C
+  4  5   45.0   1    INF           INF        N/C
+  4  6   45.6   1    INF           INF        N/C
+  4  7   46.2   1    INF           INF        N/C
+  4  8   46.8   1    INF           INF        N/C
+  4  9   47.4   1    INF           INF        N/C
+  4 10   48.0   1    INF           INF        N/C
+ 
+ 
+***** Combination: AASHTO 1 (2) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 1       4.5   2   WORST CASE LEGAL SHEAR RATING =           INF
+* 1       4.5   2   WORST CASE LEGAL MOMENT RATING =          INF
+* 1       0.0   2   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  1  0    0.0   2    INF           INF        N/C
+  1  1    0.6   2    INF           INF        N/C
+  1  2    1.2   2    INF           INF        N/C
+  1  3    1.8   2    INF           INF        N/C
+  1  4    2.4   2    INF           INF        N/C
+  1  5    3.0   2    INF           INF        N/C
+  1  6    3.6   2    INF           INF        N/C
+  1  7    4.2   2    INF           INF        N/C
+  1  8    4.8   2    N/C           N/C        N/C
+  1  9    5.4   2    N/C           N/C        N/C
+  1 10    6.0   2    N/C           N/C        N/C
+ 
+ 
+***** Combination: AASHTO 1 (2) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 2      13.5   2   WORST CASE LEGAL SHEAR RATING =          13.76
+* 2      10.0   2   WORST CASE LEGAL MOMENT RATING =          6.59
+* 2       0.0   2   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  2  0    6.0   2    N/C           N/C        N/C
+  2  1    7.8   2   82.12         50.60       N/C
+  2  2    9.6   2   83.56         14.57       N/C
+  2  3   11.4   2   44.70         10.65       N/C
+  2  4   13.2   2   44.73          8.79       N/C
+  2  5   15.0   2   43.03          7.13       N/C
+  2  6   16.8   2   29.55          7.08       N/C
+  2  7   18.6   2   13.92         12.74       N/C
+  2  8   20.4   2   15.13         36.47       N/C
+  2  9   22.2   2   15.13         25.49       N/C
+  2 10   24.0   2    N/C           N/C        N/C
+ 
+ 
+***** Combination: AASHTO 1 (2) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 3       4.0   2   WORST CASE LEGAL SHEAR RATING =          13.69
+* 3       8.0   2   WORST CASE LEGAL MOMENT RATING =          6.61
+* 3       0.0   2   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  3  0   24.0   2    N/C           N/C        N/C
+  3  1   25.8   2   15.07         22.60       N/C
+  3  2   27.6   2   15.07         39.99       N/C
+  3  3   29.4   2   13.81         14.27       N/C
+  3  4   31.2   2   22.83          7.22       N/C
+  3  5   33.0   2   43.58          7.16       N/C
+  3  6   34.8   2   45.03          8.57       N/C
+  3  7   36.6   2   45.39         10.32       N/C
+  3  8   38.4   2   41.72         13.45       N/C
+  3  9   40.2   2   82.10         37.22       N/C
+  3 10   42.0   2    N/C           N/C        N/C
+ 
+ 
+***** Combination: AASHTO 1 (2) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 4       1.5   2   WORST CASE LEGAL SHEAR RATING =           INF
+* 4       1.5   2   WORST CASE LEGAL MOMENT RATING =          INF
+* 4       0.0   2   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  4  0   42.0   2    N/C           N/C        N/C
+  4  1   42.6   2    N/C           N/C        N/C
+  4  2   43.2   2    N/C           N/C        N/C
+  4  3   43.8   2    INF           INF        N/C
+  4  4   44.4   2    INF           INF        N/C
+  4  5   45.0   2    INF           INF        N/C
+  4  6   45.6   2    INF           INF        N/C
+  4  7   46.2   2    INF           INF        N/C
+  4  8   46.8   2    INF           INF        N/C
+  4  9   47.4   2    INF           INF        N/C
+  4 10   48.0   2    INF           INF        N/C
+ 
+ 
+***** Combination: AASHTO 2 (3) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 1       4.5   3   WORST CASE LEGAL SHEAR RATING =           INF
+* 1       4.5   3   WORST CASE LEGAL MOMENT RATING =         80.12
+* 1       0.0   3   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  1  0    0.0   3    INF           INF        N/C
+  1  1    0.6   3    INF           INF        N/C
+  1  2    1.2   3    INF           INF        N/C
+  1  3    1.8   3    INF           INF        N/C
+  1  4    2.4   3    INF           INF        N/C
+  1  5    3.0   3    INF           INF        N/C
+  1  6    3.6   3    INF           INF        N/C
+  1  7    4.2   3    INF           INF        N/C
+  1  8    4.8   3    N/C           N/C        N/C
+  1  9    5.4   3    N/C           N/C        N/C
+  1 10    6.0   3    N/C           N/C        N/C
+ 
+ 
+***** Combination: AASHTO 2 (3) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 2      13.5   3   WORST CASE LEGAL SHEAR RATING =          10.27
+* 2      10.0   3   WORST CASE LEGAL MOMENT RATING =          5.03
+* 2       0.0   3   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  2  0    6.0   3    N/C           N/C        N/C
+  2  1    7.8   3   62.66         38.65       N/C
+  2  2    9.6   3   63.37         11.13       N/C
+  2  3   11.4   3   33.79          8.14       N/C
+  2  4   13.2   3   33.64          6.72       N/C
+  2  5   15.0   3   32.30          5.45       N/C
+  2  6   16.8   3   22.13          5.41       N/C
+  2  7   18.6   3   10.39          9.73       N/C
+  2  8   20.4   3   11.37         27.86       N/C
+  2  9   22.2   3   11.37         19.47       N/C
+  2 10   24.0   3    N/C           N/C        N/C
+ 
+ 
+***** Combination: AASHTO 2 (3) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 3       4.0   3   WORST CASE LEGAL SHEAR RATING =          10.22
+* 3       8.0   3   WORST CASE LEGAL MOMENT RATING =          5.05
+* 3       0.0   3   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  3  0   24.0   3    N/C           N/C        N/C
+  3  1   25.8   3   11.33         17.27       N/C
+  3  2   27.6   3   11.33         30.55       N/C
+  3  3   29.4   3   10.31         10.90       N/C
+  3  4   31.2   3   17.05          5.51       N/C
+  3  5   33.0   3   32.73          5.47       N/C
+  3  6   34.8   3   33.87          6.54       N/C
+  3  7   36.6   3   34.32          7.89       N/C
+  3  8   38.4   3   31.52         10.27       N/C
+  3  9   40.2   3   62.69         28.43       N/C
+  3 10   42.0   3    N/C           N/C        N/C
+ 
+ 
+***** Combination: AASHTO 2 (3) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 4       1.5   3   WORST CASE LEGAL SHEAR RATING =           INF
+* 4       1.5   3   WORST CASE LEGAL MOMENT RATING =          INF
+* 4       0.0   3   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  4  0   42.0   3    N/C           N/C        N/C
+  4  1   42.6   3    N/C           N/C        N/C
+  4  2   43.2   3    N/C           N/C        N/C
+  4  3   43.8   3    INF           INF        N/C
+  4  4   44.4   3    INF           INF        N/C
+  4  5   45.0   3    INF           INF        N/C
+  4  6   45.6   3    INF           INF        N/C
+  4  7   46.2   3    INF           INF        N/C
+  4  8   46.8   3    INF           INF        N/C
+  4  9   47.4   3    INF           INF        N/C
+  4 10   48.0   3    INF           INF        N/C
+ 
+ 
+***** Combination: AASHTO 3 (4) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 1       4.5   4   WORST CASE LEGAL SHEAR RATING =           INF
+* 1       4.5   4   WORST CASE LEGAL MOMENT RATING =         75.52
+* 1       0.0   4   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  1  0    0.0   4    INF           INF        N/C
+  1  1    0.6   4    INF           INF        N/C
+  1  2    1.2   4    INF           INF        N/C
+  1  3    1.8   4    INF           INF        N/C
+  1  4    2.4   4    INF           INF        N/C
+  1  5    3.0   4    INF           INF        N/C
+  1  6    3.6   4    INF           INF        N/C
+  1  7    4.2   4    INF          99.01       N/C
+  1  8    4.8   4    N/C           N/C        N/C
+  1  9    5.4   4    N/C           N/C        N/C
+  1 10    6.0   4    N/C           N/C        N/C
+ 
+ 
+***** Combination: AASHTO 3 (4) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 2      13.5   4   WORST CASE LEGAL SHEAR RATING =           9.62
+* 2      10.0   4   WORST CASE LEGAL MOMENT RATING =          4.74
+* 2       0.0   4   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  2  0    6.0   4    N/C           N/C        N/C
+  2  1    7.8   4   59.05         36.44       N/C
+  2  2    9.6   4   59.62         10.49       N/C
+  2  3   11.4   4   31.77          7.67       N/C
+  2  4   13.2   4   31.59          6.33       N/C
+  2  5   15.0   4   30.32          5.14       N/C
+  2  6   16.8   4   20.76          5.10       N/C
+  2  7   18.6   4    9.73          9.17       N/C
+  2  8   20.4   4   10.68         26.26       N/C
+  2  9   22.2   4   10.68         18.35       N/C
+  2 10   24.0   4    N/C           N/C        N/C
+ 
+ 
+***** Combination: AASHTO 3 (4) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 3       4.0   4   WORST CASE LEGAL SHEAR RATING =           9.58
+* 3       8.0   4   WORST CASE LEGAL MOMENT RATING =          4.76
+* 3       0.0   4   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  3  0   24.0   4    N/C           N/C        N/C
+  3  1   25.8   4   10.64         16.28       N/C
+  3  2   27.6   4   10.64         28.80       N/C
+  3  3   29.4   4    9.66         10.28       N/C
+  3  4   31.2   4   15.98          5.20       N/C
+  3  5   33.0   4   30.71          5.15       N/C
+  3  6   34.8   4   31.81          6.17       N/C
+  3  7   36.6   4   32.27          7.43       N/C
+  3  8   38.4   4   29.63          9.68       N/C
+  3  9   40.2   4   59.09         26.80       N/C
+  3 10   42.0   4    N/C           N/C        N/C
+ 
+ 
+***** Combination: AASHTO 3 (4) -- LEGAL rating ********************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 4       1.5   4   WORST CASE LEGAL SHEAR RATING =           INF
+* 4       1.5   4   WORST CASE LEGAL MOMENT RATING =         99.50
+* 4       0.0   4   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  4  0   42.0   4    N/C           N/C        N/C
+  4  1   42.6   4    N/C           N/C        N/C
+  4  2   43.2   4    N/C           N/C        N/C
+  4  3   43.8   4    INF           INF        N/C
+  4  4   44.4   4    INF           INF        N/C
+  4  5   45.0   4    INF           INF        N/C
+  4  6   45.6   4    INF           INF        N/C
+  4  7   46.2   4    INF           INF        N/C
+  4  8   46.8   4    INF           INF        N/C
+  4  9   47.4   4    INF           INF        N/C
+  4 10   48.0   4    INF           INF        N/C
+ 
+ 
+***** Combination: NRL (5) -- LEGAL rating *************************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 1       4.5   5   WORST CASE LEGAL SHEAR RATING =           INF
+* 1       0.0   5   WORST CASE LEGAL MOMENT RATING =         16.55
+* 1       0.0   5   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  1  0    0.0   5    INF          16.55       N/C
+  1  1    0.6   5    INF           INF        N/C
+  1  2    1.2   5    INF           INF        N/C
+  1  3    1.8   5    INF           INF        N/C
+  1  4    2.4   5    INF           INF        N/C
+  1  5    3.0   5    INF           INF        N/C
+  1  6    3.6   5    INF           INF        N/C
+  1  7    4.2   5    INF          86.43       N/C
+  1  8    4.8   5    N/C           N/C        N/C
+  1  9    5.4   5    N/C           N/C        N/C
+  1 10    6.0   5    N/C           N/C        N/C
+ 
+ 
+***** Combination: NRL (5) -- LEGAL rating *************************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 2      13.5   5   WORST CASE LEGAL SHEAR RATING =           8.28
+* 2      10.0   5   WORST CASE LEGAL MOMENT RATING =          4.14
+* 2       0.0   5   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  2  0    6.0   5    N/C           N/C        N/C
+  2  1    7.8   5   51.51         31.81       N/C
+  2  2    9.6   5   51.81          9.16       N/C
+  2  3   11.4   5   27.55          6.69       N/C
+  2  4   13.2   5   27.31          5.53       N/C
+  2  5   15.0   5   26.17          4.48       N/C
+  2  6   16.8   5   17.90          4.45       N/C
+  2  7   18.6   5    8.37          8.01       N/C
+  2  8   20.4   5    9.23         22.92       N/C
+  2  9   22.2   5    9.23         16.02       N/C
+  2 10   24.0   5    N/C           N/C        N/C
+ 
+ 
+***** Combination: NRL (5) -- LEGAL rating *************************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 3       3.8   5   WORST CASE LEGAL SHEAR RATING =           8.24
+* 3       8.0   5   WORST CASE LEGAL MOMENT RATING =          4.15
+* 3       0.0   5   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  3  0   24.0   5    N/C           N/C        N/C
+  3  1   25.8   5    9.19         14.21       N/C
+  3  2   27.6   5    9.19         25.14       N/C
+  3  3   29.4   5    8.31          8.97       N/C
+  3  4   31.2   5   13.76          4.54       N/C
+  3  5   33.0   5   26.52          4.50       N/C
+  3  6   34.8   5   27.50          5.38       N/C
+  3  7   36.6   5   27.98          6.49       N/C
+  3  8   38.4   5   25.69          8.45       N/C
+  3  9   40.2   5   51.58         23.39       N/C
+  3 10   42.0   5    N/C           N/C        N/C
+ 
+ 
+***** Combination: NRL (5) -- LEGAL rating *************************************
+ 
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 4       1.5   5   WORST CASE LEGAL SHEAR RATING =           INF
+* 4       1.5   5   WORST CASE LEGAL MOMENT RATING =         86.86
+* 4       0.0   5   WORST CASE LEGAL SVC MOMENT RATING =      N/C
+  4  0   42.0   5    N/C           N/C        N/C
+  4  1   42.6   5    N/C           N/C        N/C
+  4  2   43.2   5    N/C           N/C        N/C
+  4  3   43.8   5    INF          99.12       N/C
+  4  4   44.4   5    INF           INF        N/C
+  4  5   45.0   5    INF           INF        N/C
+  4  6   45.6   5    INF           INF        N/C
+  4  7   46.2   5    INF           INF        N/C
+  4  8   46.8   5    INF           INF        N/C
+  4  9   47.4   5    INF           INF        N/C
+  4 10   48.0   5    INF           INF        N/C
+ 
+ 
+***** Combination: OL 1 + Controlling Legal (6) -- PERMIT rating ***************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 1       4.5   6   WORST CASE PERMIT SHEAR RATING =          INF
+* 1       4.5   6   WORST CASE PERMIT MOMENT RATING =        71.77
+* 1       0.0   6   WORST CASE PERMIT SVC MOMENT RATING =     N/C
+  1  0    0.0   6    INF            INF       N/C
+  1  1    0.6   6    INF            INF       N/C
+  1  2    1.2   6    INF            INF       N/C
+  1  3    1.8   6    INF            INF       N/C
+  1  4    2.4   6    INF            INF       N/C
+  1  5    3.0   6    INF            INF       N/C
+  1  6    3.6   6    INF            INF       N/C
+  1  7    4.2   6    INF           94.10      N/C
+  1  8    4.8   6    N/C            N/C       N/C
+  1  9    5.4   6    N/C            N/C       N/C
+  1 10    6.0   6    N/C            N/C       N/C
+ 
+ 
+***** Combination: OL 1 + Controlling Legal (6) -- PERMIT rating ***************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 2      13.5   6   WORST CASE PERMIT SHEAR RATING =          7.84
+* 2      10.0   6   WORST CASE PERMIT MOMENT RATING =         4.52
+* 2       0.0   6   WORST CASE PERMIT SVC MOMENT RATING =     N/C
+  2  0    6.0   6    N/C            N/C       N/C
+  2  1    7.8   6   54.25          35.38      N/C
+  2  2    9.6   6   54.76          10.19      N/C
+  2  3   11.4   6   30.81           7.45      N/C
+  2  4   13.2   6   30.61           6.15      N/C
+  2  5   15.0   6   29.37           4.95      N/C
+  2  6   16.8   6   17.21           4.89      N/C
+  2  7   18.6   6    7.94           8.91      N/C
+  2  8   20.4   6    8.76          25.50      N/C
+  2  9   22.2   6    8.76          15.68      N/C
+  2 10   24.0   6    N/C            N/C       N/C
+ 
+ 
+***** Combination: OL 1 + Controlling Legal (6) -- PERMIT rating ***************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 3       4.0   6   WORST CASE PERMIT SHEAR RATING =          7.83
+* 3       8.0   6   WORST CASE PERMIT MOMENT RATING =         4.60
+* 3       0.0   6   WORST CASE PERMIT SVC MOMENT RATING =     N/C
+  3  0   24.0   6    N/C            N/C       N/C
+  3  1   25.8   6    8.75          13.98      N/C
+  3  2   27.6   6    8.75          27.96      N/C
+  3  3   29.4   6    7.90           9.98      N/C
+  3  4   31.2   6   13.32           5.05      N/C
+  3  5   33.0   6   29.75           5.00      N/C
+  3  6   34.8   6   30.82           5.99      N/C
+  3  7   36.6   6   31.29           7.22      N/C
+  3  8   38.4   6   27.68           9.40      N/C
+  3  9   40.2   6   55.26          26.02      N/C
+  3 10   42.0   6    N/C            N/C       N/C
+ 
+ 
+***** Combination: OL 1 + Controlling Legal (6) -- PERMIT rating ***************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 4       1.5   6   WORST CASE PERMIT SHEAR RATING =          INF
+* 4       1.5   6   WORST CASE PERMIT MOMENT RATING =        94.15
+* 4       0.0   6   WORST CASE PERMIT SVC MOMENT RATING =     N/C
+  4  0   42.0   6    N/C            N/C       N/C
+  4  1   42.6   6    N/C            N/C       N/C
+  4  2   43.2   6    N/C            N/C       N/C
+  4  3   43.8   6    INF            INF       N/C
+  4  4   44.4   6    INF            INF       N/C
+  4  5   45.0   6    INF            INF       N/C
+  4  6   45.6   6    INF            INF       N/C
+  4  7   46.2   6    INF            INF       N/C
+  4  8   46.8   6    INF            INF       N/C
+  4  9   47.4   6    INF            INF       N/C
+  4 10   48.0   6    INF            INF       N/C
+ 
+ 
+***** Combination: OL 2 + Controlling Legal (7) -- PERMIT rating ***************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 1       4.5   7   WORST CASE PERMIT SHEAR RATING =          INF
+* 1       0.0   7   WORST CASE PERMIT MOMENT RATING =         9.90
+* 1       0.0   7   WORST CASE PERMIT SVC MOMENT RATING =     N/C
+  1  0    0.0   7    INF            9.90      N/C
+  1  1    0.6   7    INF            INF       N/C
+  1  2    1.2   7    INF            INF       N/C
+  1  3    1.8   7    INF            INF       N/C
+  1  4    2.4   7    INF            INF       N/C
+  1  5    3.0   7    INF            INF       N/C
+  1  6    3.6   7    INF           70.64      N/C
+  1  7    4.2   7    INF           51.11      N/C
+  1  8    4.8   7    N/C            N/C       N/C
+  1  9    5.4   7    N/C            N/C       N/C
+  1 10    6.0   7    N/C            N/C       N/C
+ 
+ 
+***** Combination: OL 2 + Controlling Legal (7) -- PERMIT rating ***************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 2      13.5   7   WORST CASE PERMIT SHEAR RATING =          4.21
+* 2      10.0   7   WORST CASE PERMIT MOMENT RATING =         2.48
+* 2       0.0   7   WORST CASE PERMIT SVC MOMENT RATING =     N/C
+  2  0    6.0   7    N/C            N/C       N/C
+  2  1    7.8   7   29.77          19.03      N/C
+  2  2    9.6   7   29.35           5.48      N/C
+  2  3   11.4   7   15.93           4.00      N/C
+  2  4   13.2   7   15.54           3.31      N/C
+  2  5   15.0   7   14.80           2.68      N/C
+  2  6   16.8   7    9.33           2.66      N/C
+  2  7   18.6   7    4.26           4.79      N/C
+  2  8   20.4   7    4.21          13.71      N/C
+  2  9   22.2   7    4.82           9.95      N/C
+  2 10   24.0   7    N/C            N/C       N/C
+ 
+ 
+***** Combination: OL 2 + Controlling Legal (7) -- PERMIT rating ***************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 3       3.8   7   WORST CASE PERMIT SHEAR RATING =          4.16
+* 3       8.0   7   WORST CASE PERMIT MOMENT RATING =         2.48
+* 3       0.0   7   WORST CASE PERMIT SVC MOMENT RATING =     N/C
+  3  0   24.0   7    N/C            N/C       N/C
+  3  1   25.8   7    4.77           9.03      N/C
+  3  2   27.6   7    4.77          15.04      N/C
+  3  3   29.4   7    4.19           5.37      N/C
+  3  4   31.2   7    7.08           2.71      N/C
+  3  5   33.0   7   15.01           2.69      N/C
+  3  6   34.8   7   15.65           3.22      N/C
+  3  7   36.6   7   16.18           3.88      N/C
+  3  8   38.4   7   14.51           5.06      N/C
+  3  9   40.2   7   29.91          13.99      N/C
+  3 10   42.0   7    N/C            N/C       N/C
+ 
+ 
+***** Combination: OL 2 + Controlling Legal (7) -- PERMIT rating ***************
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 4       1.5   7   WORST CASE PERMIT SHEAR RATING =          INF
+* 4       1.5   7   WORST CASE PERMIT MOMENT RATING =        51.24
+* 4       0.0   7   WORST CASE PERMIT SVC MOMENT RATING =     N/C
+  4  0   42.0   7    N/C            N/C       N/C
+  4  1   42.6   7    N/C            N/C       N/C
+  4  2   43.2   7    N/C            N/C       N/C
+  4  3   43.8   7    INF           58.47      N/C
+  4  4   44.4   7    INF           78.80      N/C
+  4  5   45.0   7    INF            INF       N/C
+  4  6   45.6   7    INF            INF       N/C
+  4  7   46.2   7    INF            INF       N/C
+  4  8   46.8   7    INF            INF       N/C
+  4  9   47.4   7    INF            INF       N/C
+  4 10   48.0   7    INF            INF       N/C
+ 
+ 
+***** Combination: EV2 + Controlling Legal (8) -- Emergency Vehicle rating *****
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 1       4.5   8   WORST CASE EV SHEAR RATING =              INF
+* 1       0.0   8   WORST CASE EV MOMENT RATING =            16.55
+* 1       0.0   8   WORST CASE EV SVC MOMENT RATING =         N/C
+  1  0    0.0   8    INF           16.55      N/C
+  1  1    0.6   8    INF            INF       N/C
+  1  2    1.2   8    INF            INF       N/C
+  1  3    1.8   8    INF            INF       N/C
+  1  4    2.4   8    INF            INF       N/C
+  1  5    3.0   8    INF            INF       N/C
+  1  6    3.6   8    INF            INF       N/C
+  1  7    4.2   8    INF           86.43      N/C
+  1  8    4.8   8    N/C            N/C       N/C
+  1  9    5.4   8    N/C            N/C       N/C
+  1 10    6.0   8    N/C            N/C       N/C
+ 
+ 
+***** Combination: EV2 + Controlling Legal (8) -- Emergency Vehicle rating *****
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 2      13.5   8   WORST CASE EV SHEAR RATING =              8.34
+* 2      10.0   8   WORST CASE EV MOMENT RATING =             4.14
+* 2       0.0   8   WORST CASE EV SVC MOMENT RATING =         N/C
+  2  0    6.0   8    N/C            N/C       N/C
+  2  1    7.8   8   51.51          31.81      N/C
+  2  2    9.6   8   51.81           9.16      N/C
+  2  3   11.4   8   27.55           6.69      N/C
+  2  4   13.2   8   27.31           5.53      N/C
+  2  5   15.0   8   26.17           4.48      N/C
+  2  6   16.8   8   18.09           4.45      N/C
+  2  7   18.6   8    8.44           8.01      N/C
+  2  8   20.4   8    8.34          22.92      N/C
+  2  9   22.2   8    9.30          17.84      N/C
+  2 10   24.0   8    N/C            N/C       N/C
+ 
+ 
+***** Combination: EV2 + Controlling Legal (8) -- Emergency Vehicle rating *****
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 3       3.8   8   WORST CASE EV SHEAR RATING =              8.24
+* 3       8.0   8   WORST CASE EV MOMENT RATING =             4.15
+* 3       0.0   8   WORST CASE EV SVC MOMENT RATING =         N/C
+  3  0   24.0   8    N/C            N/C       N/C
+  3  1   25.8   8    9.19          15.99      N/C
+  3  2   27.6   8    9.19          25.14      N/C
+  3  3   29.4   8    8.31           8.97      N/C
+  3  4   31.2   8   13.76           4.54      N/C
+  3  5   33.0   8   26.52           4.50      N/C
+  3  6   34.8   8   27.50           5.38      N/C
+  3  7   36.6   8   27.98           6.49      N/C
+  3  8   38.4   8   25.69           8.45      N/C
+  3  9   40.2   8   51.58          23.39      N/C
+  3 10   42.0   8    N/C            N/C       N/C
+ 
+ 
+***** Combination: EV2 + Controlling Legal (8) -- Emergency Vehicle rating *****
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 4       1.5   8   WORST CASE EV SHEAR RATING =              INF
+* 4       1.5   8   WORST CASE EV MOMENT RATING =            86.86
+* 4       0.0   8   WORST CASE EV SVC MOMENT RATING =         N/C
+  4  0   42.0   8    N/C            N/C       N/C
+  4  1   42.6   8    N/C            N/C       N/C
+  4  2   43.2   8    N/C            N/C       N/C
+  4  3   43.8   8    INF           99.12      N/C
+  4  4   44.4   8    INF            INF       N/C
+  4  5   45.0   8    INF            INF       N/C
+  4  6   45.6   8    INF            INF       N/C
+  4  7   46.2   8    INF            INF       N/C
+  4  8   46.8   8    INF            INF       N/C
+  4  9   47.4   8    INF            INF       N/C
+  4 10   48.0   8    INF            INF       N/C
+ 
+ 
+***** Combination: EV3 + Controlling Legal (9) -- Emergency Vehicle rating *****
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 1       4.5   9   WORST CASE EV SHEAR RATING =              INF
+* 1       0.0   9   WORST CASE EV MOMENT RATING =            15.21
+* 1       0.0   9   WORST CASE EV SVC MOMENT RATING =         N/C
+  1  0    0.0   9    INF           15.21      N/C
+  1  1    0.6   9    INF            INF       N/C
+  1  2    1.2   9    INF            INF       N/C
+  1  3    1.8   9    INF            INF       N/C
+  1  4    2.4   9    INF            INF       N/C
+  1  5    3.0   9    INF            INF       N/C
+  1  6    3.6   9    INF            INF       N/C
+  1  7    4.2   9    INF           79.41      N/C
+  1  8    4.8   9    N/C            N/C       N/C
+  1  9    5.4   9    N/C            N/C       N/C
+  1 10    6.0   9    N/C            N/C       N/C
+ 
+ 
+***** Combination: EV3 + Controlling Legal (9) -- Emergency Vehicle rating *****
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 2      13.5   9   WORST CASE EV SHEAR RATING =              7.59
+* 2      10.0   9   WORST CASE EV MOMENT RATING =             3.81
+* 2       0.0   9   WORST CASE EV SVC MOMENT RATING =         N/C
+  2  0    6.0   9    N/C            N/C       N/C
+  2  1    7.8   9   47.30          29.22      N/C
+  2  2    9.6   9   47.45           8.42      N/C
+  2  3   11.4   9   25.20           6.15      N/C
+  2  4   13.2   9   24.92           5.08      N/C
+  2  5   15.0   9   23.86           4.12      N/C
+  2  6   16.8   9   16.35           4.09      N/C
+  2  7   18.6   9    7.67           7.36      N/C
+  2  8   20.4   9    7.59          21.06      N/C
+  2  9   22.2   9    8.48          15.17      N/C
+  2 10   24.0   9    N/C            N/C       N/C
+ 
+ 
+***** Combination: EV3 + Controlling Legal (9) -- Emergency Vehicle rating *****
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 3       3.8   9   WORST CASE EV SHEAR RATING =              7.49
+* 3       8.0   9   WORST CASE EV MOMENT RATING =             3.82
+* 3       0.0   9   WORST CASE EV SVC MOMENT RATING =         N/C
+  3  0   24.0   9    N/C            N/C       N/C
+  3  1   25.8   9    8.38          13.49      N/C
+  3  2   27.6   9    8.38          23.09      N/C
+  3  3   29.4   9    7.56           8.24      N/C
+  3  4   31.2   9   12.52           4.17      N/C
+  3  5   33.0   9   24.19           4.13      N/C
+  3  6   34.8   9   25.09           4.95      N/C
+  3  7   36.6   9   25.59           5.96      N/C
+  3  8   38.4   9   23.48           7.77      N/C
+  3  9   40.2   9   47.38          21.49      N/C
+  3 10   42.0   9    N/C            N/C       N/C
+ 
+ 
+***** Combination: EV3 + Controlling Legal (9) -- Emergency Vehicle rating *****
+SPAN   X Coor.                               SRV.
+ #  TP  (ft)   LC   SHEAR         MOMENT    MOMENT
+=== ==  ===.=  ==   ==.==         ==.==      ==.==
+* 4       1.5   9   WORST CASE EV SHEAR RATING =              INF
+* 4       1.5   9   WORST CASE EV MOMENT RATING =            79.80
+* 4       0.0   9   WORST CASE EV SVC MOMENT RATING =         N/C
+  4  0   42.0   9    N/C            N/C       N/C
+  4  1   42.6   9    N/C            N/C       N/C
+  4  2   43.2   9    N/C            N/C       N/C
+  4  3   43.8   9    INF           91.06      N/C
+  4  4   44.4   9    INF            INF       N/C
+  4  5   45.0   9    INF            INF       N/C
+  4  6   45.6   9    INF            INF       N/C
+  4  7   46.2   9    INF            INF       N/C
+  4  8   46.8   9    INF            INF       N/C
+  4  9   47.4   9    INF            INF       N/C
+  4 10   48.0   9    INF            INF       N/C
+ 
